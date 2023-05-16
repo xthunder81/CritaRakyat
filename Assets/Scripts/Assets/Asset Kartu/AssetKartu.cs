@@ -21,6 +21,7 @@ public class AssetKartu : ScriptableObject
     public KarakterKartu karakterKartu;  // if this is null, it`s a neutral card
     [TextArea(2,3)]
     public string Deskripsi;  // Description for spell or character
+    [TextArea(2,3)]
     public string KisahKartu; // Deskripsi Kisah Kartu
 	public Sprite GambarKartu;
     public int EnergyCost;

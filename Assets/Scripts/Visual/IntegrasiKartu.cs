@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class IntegrasiKartu : MonoBehaviour
 {
@@ -8,16 +9,16 @@ public class IntegrasiKartu : MonoBehaviour
     public IntegrasiKartu tampilanKartu;
 
     // Untuk Mendapatkan Objek Teks
-    [Header ("Referensi Komponen Teks")]
-    public Text namaText, energyCostText, seranganText, pertahananText, deskripsiText, kisahText;
+    // [Header ("Referensi Komponen Teks")]
+    public TextMeshProUGUI namaText, energyCostText, seranganText, pertahananText, deskripsiText, kisahText;
 
     // untuk mendapatkan gameobject
-    [Header ("Referensi Komponen GameObject")]
-    public GameObject seranganIcon, pertahananIcon;
+    // [Header ("Referensi Komponen GameObject")]
+    // public GameObject seranganIcon, pertahananIcon;
 
     // untuk mendapatkan gambar pada gameobject
-    [Header ("Referensi Komponen Gambar")]
-    public Image frameCard, bodyCard, textFrameNameCard, textDescFrameCard, imageCharCard, glowFace, glowBack;
+    // [Header ("Referensi Komponen Gambar")]
+    public Image frameCard, bodyCard, textFrameNameCard, imageCard, textDescFrameCard, glowFace, glowBack;
 
     void Awake()
     {
@@ -53,9 +54,12 @@ public class IntegrasiKartu : MonoBehaviour
             textDescFrameCard.color = assetKartu.karakterKartu.ClassCardTint;
         }
 
-        else 
+        else
         {
-
+            //CardBodyImage.color = GlobalSettings.Instance.CardBodyStandardColor;
+            // CardFaceFrameImage.color = Color.white;
+            //CardTopRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
+            //CardLowRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
         }
 
         // memberikan nama pada kartu
@@ -63,11 +67,10 @@ public class IntegrasiKartu : MonoBehaviour
         // menenrukan energy pada kartu
         energyCostText.text = assetKartu.EnergyCost.ToString();
         // memberikan deskripsi pada kartu
-        deskripsiText.text = assetKartu.Deskripsi;
-        // memberikan kisah pada kartu
-        kisahText.text = assetKartu.KisahKartu;
+        deskripsiText.text = assetKartu.Deskripsi;       
+        
         // mengganti sprite kartu
-        imageCharCard.sprite = assetKartu.GambarKartu;
+        imageCard.sprite = assetKartu.GambarKartu;        
 
         if (assetKartu.TotalPertahanan != 0) 
         {
@@ -80,5 +83,11 @@ public class IntegrasiKartu : MonoBehaviour
             tampilanKartu.assetKartu = assetKartu;
             tampilanKartu.MembacaKartu();
         }
+
+        // memberikan kisah pada kartu
+        // if (kisahText.text != null)
+        // {
+        //     kisahText.text = assetKartu.KisahKartu;
+        // }
     }
 }
