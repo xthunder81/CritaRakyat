@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Kartu
+    uniqueID: 2955259121
+    locked: 0
+  - name: Creature
+    uniqueID: 4182217977
+    locked: 0
+  - name: DiatasSemua
+    uniqueID: 241417877
+    locked: 0

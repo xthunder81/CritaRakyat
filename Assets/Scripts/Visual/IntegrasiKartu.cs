@@ -22,7 +22,7 @@ public class IntegrasiKartu : MonoBehaviour
 
     void Awake()
     {
-        if (assetKartu != null) 
+        if (assetKartu != null)
         {
             MembacaKartu();
         }
@@ -44,9 +44,9 @@ public class IntegrasiKartu : MonoBehaviour
         }
     }
 
-    public void MembacaKartu ()
+    public void MembacaKartu()
     {
-        if(assetKartu.karakterKartu != null)
+        if (assetKartu.karakterKartu != null)
         {
             bodyCard.color = assetKartu.karakterKartu.ClassCardTint;
             frameCard.color = assetKartu.karakterKartu.ClassCardTint;
@@ -67,17 +67,17 @@ public class IntegrasiKartu : MonoBehaviour
         // menenrukan energy pada kartu
         energyCostText.text = assetKartu.EnergyCost.ToString();
         // memberikan deskripsi pada kartu
-        deskripsiText.text = assetKartu.Deskripsi;       
-        
-        // mengganti sprite kartu
-        imageCard.sprite = assetKartu.GambarKartu;        
+        deskripsiText.text = assetKartu.Deskripsi;
 
-        if (assetKartu.TotalPertahanan != 0) 
+        // mengganti sprite kartu
+        imageCard.sprite = assetKartu.GambarKartu;
+
+        if (assetKartu.TotalPertahanan != 0)
         {
             seranganText.text = assetKartu.Serangan.ToString();
             pertahananText.text = assetKartu.TotalPertahanan.ToString();
         }
-        
+
         if (tampilanKartu != null)
         {
             tampilanKartu.assetKartu = assetKartu;
