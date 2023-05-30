@@ -1,27 +1,30 @@
+﻿using UnityEngine;
 using System.Collections;
-using UnityEngine;
 
-// Untuk Mendapatkan posisi elemen awal dan elemen akhir dari children array
-// Setelah ELement Awal dan Element Akhir di dapatkan maka secara otomatis memebrikan jarak 
-public class SameDistanceChildren : MonoBehaviour
-{
-    public Transform[] childrens;
+// place first and last elements in children array manually
+// others will be placed automatically with equal distances between first and last elements
+public class SameDistanceChildren : MonoBehaviour {
 
-    void Awake()
+    public Transform[] Children;
+
+	// Use this for initialization
+	void Awake () 
     {
-        Vector3 firstElements = childrens[0].transform.position;
-        Vector3 lastElements = childrens[childrens.Length - 1].transform.position;
+        Vector3 firstElementPos = Children[0].transform.position;
+        Vector3 lastElementPos = Children[Children.Length - 1].transform.position;
 
-        // menentukan koordinat posisi x, y, dan z dari element awal dan element akhir
-        float xDist = (lastElements.x - firstElements.x) / (float)(childrens.Length - 1);
-        float yDist = (lastElements.y - firstElements.y) / (float)(childrens.Length - 1);
-        float zDist = (lastElements.z - firstElements.z) / (float)(childrens.Length - 1);
+        // dividing by Children.Length - 1 because for example: between 10 points that are 9 segments
+        float XDist = (lastElementPos.x - firstElementPos.x)/(float)(Children.Length - 1);
+        float YDist = (lastElementPos.y - firstElementPos.y)/(float)(Children.Length - 1);
+        float ZDist = (lastElementPos.z - firstElementPos.z)/(float)(Children.Length - 1);
 
-        Vector3 Dist = new Vector3(xDist, yDist, zDist);
+        Vector3 Dist = new Vector3(XDist, YDist, ZDist);
 
-        for (int i = 1; i < childrens.Length; i++)
+        for (int i = 1; i < Children.Length; i++)
         {
-            childrens[i].transform.position = childrens[i - 1].transform.position + Dist;
+            Children[i].transform.position = Children[i - 1].transform.position + Dist;
         }
-    }
+	}
+	
+	
 }
