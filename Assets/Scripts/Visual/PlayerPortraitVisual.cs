@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 using DG.Tweening;
 
 public class PlayerPortraitVisual : MonoBehaviour {
@@ -8,7 +9,7 @@ public class PlayerPortraitVisual : MonoBehaviour {
     public CharacterAsset charAsset;
     [Header("Text Component References")]
     //public Text NameText;
-    public Text HealthText;
+    public TextMeshProUGUI HealthText;
     [Header("Image References")]
     public Image HeroPowerIconImage;
     public Image HeroPowerBackgroundImage;
@@ -24,13 +25,18 @@ public class PlayerPortraitVisual : MonoBehaviour {
 	public void ApplyLookFromAsset()
     {
         HealthText.text = charAsset.MaxHealth.ToString();
-        HeroPowerIconImage.sprite = charAsset.HeroPowerIconImage;
-        HeroPowerBackgroundImage.sprite = charAsset.HeroPowerBGImage;
-        PortraitImage.sprite = charAsset.AvatarImage;
-        PortraitBackgroundImage.sprite = charAsset.AvatarBGImage;
+        if (HeroPowerIconImage != null)
+        {
+            HeroPowerIconImage.sprite = charAsset.HeroPowerIconImage;
+            HeroPowerBackgroundImage.sprite = charAsset.HeroPowerBGImage;
 
-        HeroPowerBackgroundImage.color = charAsset.HeroPowerBGTint;
-        PortraitBackgroundImage.color = charAsset.AvatarBGTint;
+            HeroPowerBackgroundImage.color = charAsset.HeroPowerBGTint;
+        }
+        
+        PortraitImage.sprite = charAsset.AvatarImage;
+        // PortraitBackgroundImage.sprite = charAsset.AvatarBGImage;
+        
+        // PortraitBackgroundImage.color = charAsset.AvatarBGTint;
 
     }
 

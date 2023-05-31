@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pertahanan
+  m_text: Defense
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.5
+  m_fontSize: 29.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4224,7 +4224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Serangan
+  m_text: Attack
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4251,7 +4251,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.7
+  m_fontSize: 29.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4496,6 +4496,7 @@ GameObject:
   - component: {fileID: 3912074403067028101}
   - component: {fileID: 7140932641233903170}
   - component: {fileID: 8672208492299863509}
+  - component: {fileID: 7657869966276194711}
   m_Layer: 0
   m_Name: CreatureArena
   m_TagString: Untagged
@@ -4546,10 +4547,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnThisOffWhenPreviewing: {fileID: 0}
-  TargetPosition: {x: 0, y: 2.5, z: 0}
-  TargetScale: 2.5
+  TargetPosition: {x: 4, y: 0, z: 0}
+  TargetScale: 4
   previewGameObject: {fileID: 5171738377374561036}
   ActivateInAwake: 1
+--- !u!114 &7657869966276194711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746765549170899520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43834580b53bcf141ba70aaff0a21e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardAsset: {fileID: 0}
+  PreviewManager: {fileID: 7446492199373294692}
+  HealthText: {fileID: 8125500104646986278}
+  AttackText: {fileID: 3106704218373890812}
+  CreatureGraphicImage: {fileID: 877421701333754906}
+  CreatureGlowImage: {fileID: 469046104772532741}
 --- !u!1 &8877847300931910250
 GameObject:
   m_ObjectHideFlags: 0

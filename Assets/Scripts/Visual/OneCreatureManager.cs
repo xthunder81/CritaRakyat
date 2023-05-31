@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class OneCreatureManager : MonoBehaviour 
 {
     public CardAsset cardAsset;
     public OneCardManager PreviewManager;
     [Header("Text Component References")]
-    public Text HealthText;
-    public Text AttackText;
+    public TextMeshProUGUI HealthText;
+    public TextMeshProUGUI AttackText;
     [Header("Image References")]
     public Image CreatureGraphicImage;
     public Image CreatureGlowImage;
