@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 /// <summary>
 /// This class will show damage dealt to creatures or players
@@ -21,7 +22,7 @@ public class DamageEffect : MonoBehaviour {
     public CanvasGroup cg;
 
     // The text component to show the amount of damage taken by target like: "-2"
-    public Text AmountText;
+    public TextMeshProUGUI AmountText;
 
     void Awake()
     {
@@ -58,6 +59,11 @@ public class DamageEffect : MonoBehaviour {
             return;
         // Instantiate a DamageEffect from prefab
         GameObject newDamageEffect = GameObject.Instantiate(GlobalSettings.Instance.DamageEffectPrefab, position, Quaternion.identity) as GameObject;
+        
+        // Test Damage Effect
+        // GameObject newDamageEffect = new GameObject();
+        // newDamageEffect = GameObject.Instantiate(DamageEffectTest.Instance.DamagePrefab, position, Quaternion.identity) as GameObject;
+        
         // Get DamageEffect component in this new game object
         DamageEffect de = newDamageEffect.GetComponent<DamageEffect>();
         // Change the amount text to reflect the amount of damage dealt
