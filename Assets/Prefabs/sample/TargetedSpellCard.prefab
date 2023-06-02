@@ -2255,6 +2255,8 @@ GameObject:
   - component: {fileID: 8970427086841216494}
   - component: {fileID: 672468296020651800}
   - component: {fileID: 540849834010923249}
+  - component: {fileID: 2958792128408088934}
+  - component: {fileID: 1202898295997303259}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -2361,6 +2363,31 @@ MonoBehaviour:
   TargetScale: 3
   previewGameObject: {fileID: 2429128018312571230}
   ActivateInAwake: 1
+--- !u!114 &2958792128408088934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158840352560024685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d17371b79f32a4db9e686b536e8bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1202898295997303259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158840352560024685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8af2f7a8cc39c445a011ea02894fa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets: 4
 --- !u!1 &6240120535579670812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,6 +3590,7 @@ GameObject:
   - component: {fileID: 4522378077588552449}
   - component: {fileID: 910567092537969406}
   - component: {fileID: 2788123923670069925}
+  - component: {fileID: 7891722792834247024}
   m_Layer: 0
   m_Name: TargetedSpellCard
   m_TagString: Untagged
@@ -3627,6 +3655,18 @@ MonoBehaviour:
   CardBodyImage: {fileID: 3195290193556486732}
   CardFaceFrameImage: {fileID: 5128201649890095799}
   CardFaceGlowImage: {fileID: 1011813367371252609}
+--- !u!114 &7891722792834247024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208387544571454404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367f6e58f02386c43ab347e3e77fa660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8451500577381906791
 GameObject:
   m_ObjectHideFlags: 0
