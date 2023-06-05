@@ -102,8 +102,9 @@ public class TurnManager : MonoBehaviour {
                 }
                 // add one more card to second player`s hand
                 whoGoesSecond.DrawACard(true);
-                //new GivePlayerACoinCommand(null, whoGoesSecond).AddToQueue();
+                // new GivePlayerACoinCommand(null, whoGoesSecond).AddToQueue();
                 whoGoesSecond.GetACardNotFromDeck(CoinCard);
+                                
                 new StartATurnCommand(whoGoesFirst).AddToQueue();
             });
     }

@@ -19,7 +19,7 @@ MonoBehaviour:
   CardImage: {fileID: 21300000, guid: 33fb14b2a525d0f4e92dbfc4c7130b3a, type: 3}
   ManaCost: 0
   MaxHealth: 0
-  Attack: 0
+  Attack: 1
   AttacksForOneTurn: 1
   Charge: 0
   CreatureScriptName: 

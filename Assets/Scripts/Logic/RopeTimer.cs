@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -10,7 +11,7 @@ public class RopeTimer : MonoBehaviour, IEventSystemHandler
     public Slider RopeSlider;
 	public float TimeForOneTurn;
     public float RopeBurnTime;
-    public Text TimerText;
+    public TextMeshProUGUI TimerText;
 
     private float timeTillZero;
     private bool counting = false;

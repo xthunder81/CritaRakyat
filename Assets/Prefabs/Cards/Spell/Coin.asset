@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41e206fc57f453a42b932de9e94caabf, type: 3}
-  m_Name: Nawang Wulan
+  m_Name: Coin
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
-  Description: Heal 4 Heath
+  Description: 
   Story: 
-  storyType: 1
-  CardImage: {fileID: 21300000, guid: 7ca5f6a3129b0e74b8f117b8b7a1d600, type: 3}
+  storyType: 0
+  CardImage: {fileID: 21300000, guid: 5134138d1a3450e4ba3d7bf5d83dbd8f, type: 3}
   ManaCost: 0
   MaxHealth: 0
-  Attack: 2
+  Attack: 0
   AttacksForOneTurn: 1
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
+  SpellScriptName: GiveManaBonus
+  specialSpellAmount: 1
   Targets: 0

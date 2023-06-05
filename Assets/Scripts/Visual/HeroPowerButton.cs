@@ -46,12 +46,12 @@ public class HeroPowerButton : MonoBehaviour {
         }
     }
 
-    void OnMouseDown()
-    {
-        if (!WasUsedThisTurn && Highlighted)
-        {
-            GlobalSettings.Instance.Players[owner].UseHeroPower();
-            WasUsedThisTurn= !WasUsedThisTurn;
-        }
-    }
+    // void OnMouseDown()
+    // {
+    //     if (!WasUsedThisTurn && Highlighted)
+    //     {
+    //         GlobalSettings.Instance.Players[owner].UseHeroPower();
+    //         WasUsedThisTurn= !WasUsedThisTurn;
+    //     }
+    // }
 }

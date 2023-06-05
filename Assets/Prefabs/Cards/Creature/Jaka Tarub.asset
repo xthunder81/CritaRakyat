@@ -17,7 +17,7 @@ MonoBehaviour:
   Story: 
   storyType: 1
   CardImage: {fileID: 21300000, guid: acfc228c2250cf24196195bc0392030c, type: 3}
-  ManaCost: 2
+  ManaCost: 0
   MaxHealth: 3
   Attack: 4
   AttacksForOneTurn: 1

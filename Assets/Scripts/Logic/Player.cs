@@ -14,7 +14,7 @@ public class Player : MonoBehaviour, ICharacter
     // (essenitially, using hero power is like playing a spell in a way)
     public SpellEffect HeroPowerEffect;
     // a flag not to use hero power twice
-    public bool usedHeroPowerThisTurn = false;
+    // public bool usedHeroPowerThisTurn = false;
 
     // REFERENCES TO LOGICAL STUFF THAT BELONGS TO THIS PLAYER
     public Deck deck;
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour, ICharacter
                 manaThisTurn = PArea.ManaBar.Crystals.Length;
             else
                 manaThisTurn = value;
-            //PArea.ManaBar.TotalCrystals = manaThisTurn;
+            PArea.ManaBar.TotalCrystals = manaThisTurn;
             new UpdateManaCrystalsCommand(this, manaThisTurn, manaLeft).AddToQueue();
         }
     }
@@ -126,12 +126,12 @@ public class Player : MonoBehaviour, ICharacter
     {
         // add one mana crystal to the pool;
         Debug.Log("In ONTURNSTART for "+ gameObject.name);
-        usedHeroPowerThisTurn = false;
+        // usedHeroPowerThisTurn = false;
         ManaThisTurn++;
         ManaLeft = ManaThisTurn;
         foreach (CreatureLogic cl in table.CreaturesOnTable)
             cl.OnTurnStart();
-        PArea.HeroPower.WasUsedThisTurn = false;
+        // PArea.HeroPower.WasUsedThisTurn = false;
     }
 
     public void OnTurnEnd()
@@ -280,12 +280,12 @@ public class Player : MonoBehaviour, ICharacter
     }
 
     // use hero power - activate is effect like you`ve payed a spell
-    public void UseHeroPower()
-    {
-        ManaLeft -= 2;
-        usedHeroPowerThisTurn = true;
-        HeroPowerEffect.ActivateEffect();
-    }
+    // public void UseHeroPower()
+    // {
+    //     ManaLeft -= 2;
+    //     usedHeroPowerThisTurn = true;
+    //     HeroPowerEffect.ActivateEffect();
+    // }
 
     // METHOD TO SHOW GLOW HIGHLIGHTS
     public void HighlightPlayableCards(bool removeAllHighlights = false)
@@ -305,7 +305,8 @@ public class Player : MonoBehaviour, ICharacter
                 g.GetComponent<OneCreatureManager>().CanAttackNow = (crl.AttacksLeftThisTurn > 0) && !removeAllHighlights;
         }   
         // highlight hero power
-        PArea.HeroPower.Highlighted = (!usedHeroPowerThisTurn) && (ManaLeft > 1) && !removeAllHighlights;
+        // PArea.HeroPower.Highlighted = (!usedHeroPowerThisTurn) && (ManaLeft > 1) && !removeAllHighlights;
+        // PArea.HeroPower.Highlighted = (ManaLeft > 1) && !removeAllHighlights;
     }
 
     // START GAME METHODS
@@ -316,14 +317,14 @@ public class Player : MonoBehaviour, ICharacter
         PArea.Portrait.charAsset = charAsset;
         PArea.Portrait.ApplyLookFromAsset();
 
-        if (charAsset.HeroPowerName != null && charAsset.HeroPowerName != "")
-        {
-            HeroPowerEffect = System.Activator.CreateInstance(System.Type.GetType(charAsset.HeroPowerName)) as SpellEffect;
-        }
-        else
-        {
-            Debug.LogWarning("Check hero powr name for character " + charAsset.ClassName);
-        }
+        // if (charAsset.HeroPowerName != null && charAsset.HeroPowerName != "")
+        // {
+        //     HeroPowerEffect = System.Activator.CreateInstance(System.Type.GetType(charAsset.HeroPowerName)) as SpellEffect;
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Check hero powr name for character " + charAsset.ClassName);
+        // }
     }
 
     public void TransmitInfoAboutPlayerToVisual()
