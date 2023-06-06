@@ -289,7 +289,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10000
   m_Sprite: {fileID: -581113525, guid: 4bd8b46b2793da145838ad57bc771253, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1249,6 +1249,18 @@ PrefabInstance:
       propertyPath: owner
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7517598807779286008, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517598808126667186, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517598808634120431, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7517598809077975337, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1299,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646815496357921578, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
       propertyPath: m_Center.z
-      value: 0.11
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
@@ -1791,7 +1803,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -2227,6 +2239,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
   - {fileID: 11400000, guid: 0b02c39f84dda7146b288adfddba8d5a, type: 2}
   - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
 --- !u!1 &1681946213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,6 +2652,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1310127586}
     m_Modifications:
+    - target: {fileID: 7517598807779286008, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517598808126667186, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517598808634120431, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7517598809077975337, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2689,7 +2718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646815496357921578, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}
       propertyPath: m_Center.z
-      value: 0.11
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffad7a4cc3410e4ebc9cc9ac7bec1ac, type: 3}

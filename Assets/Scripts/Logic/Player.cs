@@ -153,6 +153,11 @@ public class Player : MonoBehaviour, ICharacter
         ManaLeft += amount;
     }
 
+    public void GetHealSpell (int amount)
+    {
+        
+    }
+
     // FOR TESTING ONLY
     void Update()
     {

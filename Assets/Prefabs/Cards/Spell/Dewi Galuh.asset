@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Dewi Galuh
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
-  Description: 
+  Description: Deal 2 Damage On Enemy Creature
   Story: 
   storyType: 2
   CardImage: {fileID: 21300000, guid: 33fb14b2a525d0f4e92dbfc4c7130b3a, type: 3}
-  ManaCost: 0
+  ManaCost: 1
   MaxHealth: 0
-  Attack: 1
+  Attack: 0
   AttacksForOneTurn: 1
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
-  Targets: 0
+  SpellScriptName: DealDamageToTarget
+  specialSpellAmount: 2
+  Targets: 1
