@@ -19,11 +19,11 @@ MonoBehaviour:
   CardImage: {fileID: 21300000, guid: 7ca5f6a3129b0e74b8f117b8b7a1d600, type: 3}
   ManaCost: 0
   MaxHealth: 0
-  Attack: 2
+  Attack: 0
   AttacksForOneTurn: 1
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
+  SpellScriptName: GiveHealth
+  specialSpellAmount: 4
   Targets: 0
