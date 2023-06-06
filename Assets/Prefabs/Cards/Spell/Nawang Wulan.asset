@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Nawang Wulan
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
-  Description: Heal 4 Heath
+  Description: Heal 4 Heath to Player Character
   Story: 
   storyType: 1
   CardImage: {fileID: 21300000, guid: 7ca5f6a3129b0e74b8f117b8b7a1d600, type: 3}
-  ManaCost: 0
+  ManaCost: 2
   MaxHealth: 0
   Attack: 0
   AttacksForOneTurn: 1
