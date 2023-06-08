@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: 0
-  ControlsON: 1
+  ControlsON: 0
   PDeck: {fileID: 590832480}
   ManaBar: {fileID: 143271969}
   handVisual: {fileID: 1889148952}
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 551335634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f470ac113e2ca5419351c3d4c1bcfbe, type: 3}
+  m_Script: {fileID: 11500000, guid: d055d7a0b148b46418a9b190fd711556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &560938684
@@ -1458,10 +1458,10 @@ RectTransform:
   m_Father: {fileID: 1946730675}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.18428573, y: 0.10911494}
+  m_AnchorMax: {x: 0.8228572, y: 0.8908851}
+  m_AnchoredPosition: {x: -2.5, y: 0}
+  m_SizeDelta: {x: -347, y: -172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634982565
 MonoBehaviour:
@@ -2938,7 +2938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09, y: 0.36}
   m_AnchorMax: {x: 0.91, y: 0.65000004}
-  m_AnchoredPosition: {x: 0, y: -0.5000019}
+  m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 0.19999695, y: 0.7723999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822926080
@@ -3369,7 +3369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1946730675
 RectTransform:
   m_ObjectHideFlags: 0

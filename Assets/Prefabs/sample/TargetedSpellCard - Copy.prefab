@@ -2263,7 +2263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &815439151176428345
 Transform:
   m_ObjectHideFlags: 0
@@ -2361,7 +2361,7 @@ MonoBehaviour:
   TurnThisOffWhenPreviewing: {fileID: 0}
   TargetPosition: {x: 0, y: 3, z: 0}
   TargetScale: 3
-  previewGameObject: {fileID: 0}
+  previewGameObject: {fileID: 2429128018312571230}
   ActivateInAwake: 1
 --- !u!114 &2958792128408088934
 MonoBehaviour:

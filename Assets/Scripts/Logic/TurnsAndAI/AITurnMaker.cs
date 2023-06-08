@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 //this class will take all decisions for AI. 
 
-public class AITurnMaker: TurnMaker {
+public class AITurnMaker : TurnMaker
+{
 
     public override void OnTurnStart()
     {
@@ -37,7 +39,7 @@ public class AITurnMaker: TurnMaker {
             return true;
         else if (attackFirst)
             return AttackWithACreature() || PlayACardFromHand(); //|| UseHeroPower();
-        else 
+        else
             return PlayACardFromHand() || AttackWithACreature(); //|| UseHeroPower();
     }
 
@@ -57,8 +59,21 @@ public class AITurnMaker: TurnMaker {
                         InsertDelay(1.5f);
                         //Debug.Log("Card: " + c.ca.name + " can be played");
                         return true;
-                    }                        
+                    }
+
+                    // this gets all available targets for the targeted spell:
+                    var targets = GetTargets(c.ca.Targets);
+
+                    if (targets.Count > 0)
+                    {
+                        // this plays a spell and selects a random target from the list:
+                        p.PlayASpellFromHand(c, targets[Random.Range(0, targets.Count - 1)]);
+                        InsertDelay(1.5f);
+                        return true;
+                    }
+
                 }
+
                 else
                 {
                     // it is a creature card
@@ -98,10 +113,10 @@ public class AITurnMaker: TurnMaker {
                     int index = Random.Range(0, p.otherPlayer.table.CreaturesOnTable.Count);
                     CreatureLogic targetCreature = p.otherPlayer.table.CreaturesOnTable[index];
                     cl.AttackCreature(targetCreature);
-                }                    
+                }
                 else
                     cl.GoFace();
-                
+
                 InsertDelay(1f);
                 //Debug.Log("AI attacked with creature");
                 return true;
@@ -115,4 +130,39 @@ public class AITurnMaker: TurnMaker {
         new DelayCommand(delay).AddToQueue();
     }
 
+    private List<ICharacter> GetTargets(TargetingOptions targetingOptions)
+    {
+        var list = new List<ICharacter>();
+
+        switch (targetingOptions)
+        {
+            case TargetingOptions.AllCreatures:
+                list.AddRange(p.table.CreaturesOnTable);
+                list.AddRange(p.otherPlayer.table.CreaturesOnTable);
+                break;
+            case TargetingOptions.EnemyCreatures:
+                list.AddRange(p.otherPlayer.table.CreaturesOnTable);
+                break;
+            case TargetingOptions.YourCreatures:
+                list.AddRange(p.table.CreaturesOnTable);
+                break;
+            case TargetingOptions.AllCharacters:
+                list.AddRange(p.table.CreaturesOnTable);
+                list.AddRange(p.otherPlayer.table.CreaturesOnTable);
+                list.Add(p);
+                list.Add(p.otherPlayer);
+                break;
+            case TargetingOptions.EnemyCharacters:
+                list.AddRange(p.otherPlayer.table.CreaturesOnTable);
+                list.Add(p.otherPlayer);
+                break;
+            case TargetingOptions.YourCharacters:
+                list.AddRange(p.table.CreaturesOnTable);
+                list.Add(p);
+                break;
+        }
+
+        return list;
+    }
+    
 }

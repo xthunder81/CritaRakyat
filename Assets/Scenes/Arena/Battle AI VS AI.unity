@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: 0
-  ControlsON: 1
+  ControlsON: 0
   PDeck: {fileID: 590832480}
   ManaBar: {fileID: 143271969}
   handVisual: {fileID: 1889148952}
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 551335634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f470ac113e2ca5419351c3d4c1bcfbe, type: 3}
+  m_Script: {fileID: 11500000, guid: d055d7a0b148b46418a9b190fd711556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &560938684
@@ -2458,7 +2458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: 1
-  ControlsON: 1
+  ControlsON: 0
   PDeck: {fileID: 2974109873092408490}
   ManaBar: {fileID: 1982471813}
   handVisual: {fileID: 1818995217225480861}
@@ -2895,7 +2895,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681946213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f470ac113e2ca5419351c3d4c1bcfbe, type: 3}
+  m_Script: {fileID: 11500000, guid: d055d7a0b148b46418a9b190fd711556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1787368213 stripped
