@@ -15,7 +15,8 @@ public enum TargetingOptions
 
 public enum StoryType
 {
-    Mistis,
+    None,
+    Mitos,
     Legenda,
     Dongeng
 }

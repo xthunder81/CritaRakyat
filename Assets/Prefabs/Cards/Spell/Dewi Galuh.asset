@@ -15,7 +15,7 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Description: Deal 2 Damage To Enemy Creature
   Story: 
-  storyType: 2
+  storyType: 3
   CardImage: {fileID: 21300000, guid: 33fb14b2a525d0f4e92dbfc4c7130b3a, type: 3}
   ManaCost: 1
   MaxHealth: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Description: 
   Story: 
-  storyType: 2
+  storyType: 3
   CardImage: {fileID: 21300000, guid: 18bce9af2ec0e8d479bdc1633aac97ec, type: 3}
   ManaCost: 1
   MaxHealth: 4

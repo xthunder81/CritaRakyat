@@ -3,7 +3,7 @@ using System.Collections;
 
 public enum CharClass
 {
-    Mistis, Legenda, Dongeng
+    Mitos, Legenda, Dongeng
 }
 
 public class CharacterAsset : ScriptableObject
