@@ -16,6 +16,8 @@ MonoBehaviour:
   Description: 
   Story: 
   storyType: 3
+  rarityOptions: 0
+  typeOfCards: 0
   CardImage: {fileID: 21300000, guid: 18bce9af2ec0e8d479bdc1633aac97ec, type: 3}
   ManaCost: 1
   MaxHealth: 4

@@ -15,4 +15,16 @@ public class SceneReloader: MonoBehaviour {
         Command.CommandExecutionComplete();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void LoadScene(string SceneName)
+    {
+        // string sceneName = SceneName.ToString();
+        // SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneName);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

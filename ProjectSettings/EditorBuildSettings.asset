@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu/Home.unity
+    guid: 0af140261e931c44988958be10d071fc
+  - enabled: 1
     path: Assets/Scenes/Arena/Battle Player VS AI.unity
     guid: 86ee2dd2dfe8e6d47b8c35a30e6333db
+  - enabled: 1
+    path: Assets/Scenes/Arena/Battle AI VS AI.unity
+    guid: 10f8b3451d30f0b4793bed18a315d033
   m_configObjects: {}

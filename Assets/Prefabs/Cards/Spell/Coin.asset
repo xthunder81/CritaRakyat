@@ -16,8 +16,12 @@ MonoBehaviour:
   Description: 
   Story: 
   storyType: 0
+  rarityOptions: 0
+  typeOfCard: 0
   CardImage: {fileID: 21300000, guid: 5134138d1a3450e4ba3d7bf5d83dbd8f, type: 3}
   ManaCost: 0
+  TokenCard: 1
+  OverrideLimitOfThisCardInDeck: -1
   MaxHealth: 0
   Attack: 0
   AttacksForOneTurn: 1

@@ -10,5 +10,6 @@ public class PlayerStartInfo
 
 public static class BattleStartInfo  
 {
-    public static PlayerStartInfo[] PlayerInfos; 
+    // public static PlayerStartInfo[] PlayerInfos; 
+    public static DeckInfo SelectedDeck;
 }

@@ -16,6 +16,8 @@ MonoBehaviour:
   Description: 
   Story: 
   storyType: 0
+  rarityOptions: 0
+  typeOfCards: 1
   CardImage: {fileID: 0}
   ManaCost: 0
   MaxHealth: 0
