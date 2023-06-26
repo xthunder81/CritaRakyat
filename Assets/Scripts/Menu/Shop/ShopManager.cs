@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using DG.Tweening;
 
 public class ShopManager : MonoBehaviour {
@@ -14,8 +15,8 @@ public class ShopManager : MonoBehaviour {
     public float PosXRange = 4f;
     public float PosYRange = 8f;
     public float RotationRange = 10f;
-    public Text MoneyText;
-    public Text DustText;
+    public TextMeshProUGUI MoneyText;
+    public TextMeshProUGUI DustText;
     public GameObject MoneyHUD;
     public GameObject DustHUD;
     public PackOpeningArea OpeningArea;

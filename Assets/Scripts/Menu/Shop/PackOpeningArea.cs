@@ -131,7 +131,7 @@ public class PackOpeningArea : MonoBehaviour {
         CardCollection.Instance.QuantityOfEachCard[a]++;
 
         GameObject card;
-        if (a.typeOfCard == TypesOfCards.Creature)
+        if (a.TypeOfCard == TypesOfCards.Creature)
             card = Instantiate(CreatureCardFromPackPrefab) as GameObject;
         else 
             card = Instantiate(SpellCardFromPackPrefab) as GameObject;

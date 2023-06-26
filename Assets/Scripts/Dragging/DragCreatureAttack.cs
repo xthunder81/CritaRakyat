@@ -155,4 +155,9 @@ public class DragCreatureAttack : DraggingActions {
     {
         return true;
     }
+
+    public override void OnCancelDrag()
+    {
+        
+    }
 }

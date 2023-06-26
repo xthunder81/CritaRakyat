@@ -39,7 +39,7 @@ public class Draggable : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if (da!=null && da.CanDrag)
+        if (da!=null && da.CanDrag )
         {
             dragging = true;
             // when we are dragging something, all previews should be off
@@ -82,6 +82,29 @@ public class Draggable : MonoBehaviour {
         //Debug.Log(screenMousePos);
         screenMousePos.z = zDisplacement;
         return Camera.main.ScreenToWorldPoint(screenMousePos);
+    }
+
+    public void StartDragging()
+    {
+        dragging = true;
+        // when we are dragging something, all previews should be off
+        HoverPreview.PreviewsAllowed = false;
+        _draggingThis = this;
+        da.OnStartDrag();
+        zDisplacement = -Camera.main.transform.position.z + transform.position.z;
+        pointerDisplacement = -transform.position + MouseInWorldCoords();
+    }
+
+    public void CancelDrag()
+    {
+        if (dragging)
+        {
+            dragging = false;
+            // turn all previews back on
+            HoverPreview.PreviewsAllowed = true;
+            _draggingThis = null;
+            da.OnCancelDrag();
+        }
     }
         
 }

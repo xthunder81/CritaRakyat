@@ -44,7 +44,7 @@ public class CraftingScreen : MonoBehaviour {
 
         // select type of card to show on this screen - creature or spell
         GameObject cardObject;
-        if (currentCard.typeOfCard == TypesOfCards.Creature)
+        if (currentCard.TypeOfCard == TypesOfCards.Creature)
         {
             cardObject = CreatureCard;
             CreatureCard.SetActive(true);
@@ -62,8 +62,8 @@ public class CraftingScreen : MonoBehaviour {
         manager.ReadCardFromAsset();
 
         // change the text on buttons
-        CraftText.text = "Craft this card for " + TradingCosts[cardToShow.rarityOptions].CraftCost.ToString() + " dust";
-        DisenchantText.text = "Disenchant to get " + TradingCosts[cardToShow.rarityOptions].DisenchantOutcome.ToString() + " dust";
+        CraftText.text = "Craft this card for " + TradingCosts[cardToShow.Rarity].CraftCost.ToString() + " dust";
+        DisenchantText.text = "Disenchant to get " + TradingCosts[cardToShow.Rarity].DisenchantOutcome.ToString() + " dust";
 
         ShopManager.Instance.DustHUD.SetActive(true);
         // make sure that correct amount of cards is shown
@@ -90,11 +90,11 @@ public class CraftingScreen : MonoBehaviour {
 
     public void CraftCurrentCard()
     {
-        if (currentCard.rarityOptions!= RarityOptions.Common)
+        if (currentCard.Rarity != RarityOptions.Basic)
         {
-            if (ShopManager.Instance.Dust >= TradingCosts[currentCard.rarityOptions].CraftCost)
+            if (ShopManager.Instance.Dust >= TradingCosts[currentCard.Rarity].CraftCost)
             {
-                ShopManager.Instance.Dust -= TradingCosts[currentCard.rarityOptions].CraftCost;
+                ShopManager.Instance.Dust -= TradingCosts[currentCard.Rarity].CraftCost;
                 CardCollection.Instance.QuantityOfEachCard[currentCard]++;
                 UpdateQuantityOfCurrentCard();
             }
@@ -107,12 +107,12 @@ public class CraftingScreen : MonoBehaviour {
 
     public void DisenchantCurrentCard()
     {
-        if (currentCard.rarityOptions != RarityOptions.Common)
+        if (currentCard.Rarity != RarityOptions.Basic)
         {
             if (CardCollection.Instance.QuantityOfEachCard[currentCard] > 0)
             {
                 CardCollection.Instance.QuantityOfEachCard[currentCard]--;
-                ShopManager.Instance.Dust += TradingCosts[currentCard.rarityOptions].DisenchantOutcome;
+                ShopManager.Instance.Dust += TradingCosts[currentCard.Rarity].DisenchantOutcome;
                 UpdateQuantityOfCurrentCard();
 
                 // check if any of the decks in the collection are now lacking cards because we have disenchanted this card. 

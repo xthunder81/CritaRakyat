@@ -69,7 +69,7 @@ public class CollectionBrowser : MonoBehaviour {
         }
     }
 
-    private RarityOptions _rarity = RarityOptions.Common;  // since includeAllRarities is always true, this rarity field will not matter
+    private RarityOptions _rarity = RarityOptions.Basic;  // since includeAllRarities is always true, this rarity field will not matter
     public RarityOptions Rarity 
     {
         get{ return _rarity; }
@@ -135,7 +135,7 @@ public class CollectionBrowser : MonoBehaviour {
         CardsThatYouDoNotHaveToggleScript.SetValue(false);
         ManaFilterSctipt.RemoveAllFilters();
 
-        ShowCards(false, 0, true, false, RarityOptions.Common, null, "", -1, false);
+        ShowCards(false, 0, true, false, RarityOptions.Basic, null, "", -1, false);
 
         // select neutral tab by default:
         DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);   
@@ -151,7 +151,7 @@ public class CollectionBrowser : MonoBehaviour {
 
         _character = buildingForThisCharacter;
 
-        ShowCards(false, 0, true, false, RarityOptions.Common, _character, "", -1, false);
+        ShowCards(false, 0, true, false, RarityOptions.Basic, _character, "", -1, false);
 
         // select a tab with class cards by default
         DeckBuildingScreen.Instance.TabsScript.ClassTab.Select(instant: true);
@@ -184,7 +184,7 @@ public class CollectionBrowser : MonoBehaviour {
     }
 
     private void ShowCards(bool showingCardsPlayerDoesNotOwn = false, int pageIndex = 0, bool includeAllRarities = true, bool includeAllCharacters = true, 
-        RarityOptions rarity = RarityOptions.Common, CharacterAsset asset = null, string keyword = "", int manaCost = -1, bool includeTokenCards = false)
+        RarityOptions rarity = RarityOptions.Basic, CharacterAsset asset = null, string keyword = "", int manaCost = -1, bool includeTokenCards = false)
     {
         // saving the information about the cards that we are showing to players on this page
         _showingCardsPlayerDoesNotOwn = showingCardsPlayerDoesNotOwn;
@@ -212,7 +212,7 @@ public class CollectionBrowser : MonoBehaviour {
         {
             GameObject newMenuCard;
 
-            if (CardsOnThisPage[i].typeOfCard == TypesOfCards.Creature)
+            if (CardsOnThisPage[i].TypeOfCard == TypesOfCards.Creature)
             {
                 // it is a creature card
                 newMenuCard = Instantiate(CreatureMenuPrefab, Slots[i].position, Quaternion.identity) as GameObject;
@@ -258,7 +258,7 @@ public class CollectionBrowser : MonoBehaviour {
 
     // Returns a list with assets of cards that we have to show on page with pageIndex that. Selects cards that satisfy all the other parameters (rarity, manaCost, etc...)
     private List<CardAsset> PageSelection(bool showingCardsPlayerDoesNotOwn = false, int pageIndex = 0, bool includeAllRarities = true, bool includeAllCharacters = true, 
-        RarityOptions rarity = RarityOptions.Common, CharacterAsset asset = null, string keyword = "", int manaCost = -1, bool includeTokenCards = false)
+        RarityOptions rarity = RarityOptions.Basic, CharacterAsset asset = null, string keyword = "", int manaCost = -1, bool includeTokenCards = false)
     {
         List<CardAsset> returnList = new List<CardAsset>();
 

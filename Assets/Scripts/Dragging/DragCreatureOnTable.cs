@@ -73,4 +73,15 @@ public class DragCreatureOnTable : DraggingActions {
 
         return TableVisual.CursorOverSomeTable && TableNotFull;
     }
+
+    public override void OnCancelDrag()
+    {
+        // Set old sorting order 
+        whereIsCard.SetHandSortingOrder();
+        whereIsCard.VisualState = tempState;
+        // Move this card back to its slot position
+        HandVisual PlayerHand = playerOwner.PArea.handVisual;
+        Vector3 oldCardPos = PlayerHand.slots.Children[savedHandSlot].transform.localPosition;
+        transform.DOLocalMove(oldCardPos, 1f);
+    }
 }

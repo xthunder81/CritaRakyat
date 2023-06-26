@@ -23,18 +23,33 @@ public class BetterCardRotation2 : MonoBehaviour {
             CardFront.gameObject.SetActive(true);
             CardBack.gameObject.SetActive(false);
         }
-        else
+
+        else 
         {
             // show the back side
             CardFront.gameObject.SetActive(false);
             CardBack.gameObject.SetActive(true);
         }
+
+        // if (isCardBackFacingCamera())
+        // {
+        //     // show the back side
+        //     CardFront.gameObject.SetActive(false);
+        //     CardBack.gameObject.SetActive(true);
+        // }
     }
  
     bool isCardFrontFacingCamera()
     {
         return Vector3.Dot(
             CardFront.transform.forward,
+            Camera.main.transform.position - CardFront.transform.position) < 0;
+    }
+
+    bool isCardBackFacingCamera()
+    {
+        return Vector3.Dot(
+            CardBack.transform.forward,
             Camera.main.transform.position - CardFront.transform.position) < 0;
     }
 }
