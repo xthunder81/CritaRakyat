@@ -31,7 +31,7 @@ public class DeckBuildingScreen : MonoBehaviour {
         BuilderScript.InDeckBuildingMode = false;
         ListOfReadyMadeDecksScript.UpdateList();
 
-        CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
+        // CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
         CollectionBrowserScript.OneCharacterTabs.gameObject.SetActive(false);
         Canvas.ForceUpdateCanvases();
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public enum TargetingOptions
 {
@@ -31,7 +32,7 @@ public enum TypesOfCards
     Creature, Spell
 }
 
-public class CardAsset : ScriptableObject
+public class CardAsset : ScriptableObject, IComparable<CardAsset>
 {
     // this object will hold the info about the most general card
     [Header("General info")]
@@ -70,5 +71,46 @@ public class CardAsset : ScriptableObject
     public string SpellScriptName;
     public int specialSpellAmount;
     public TargetingOptions Targets;
+
+    public int CompareTo (CardAsset other) 
+    {
+        if (other.ManaCost < this.ManaCost)
+        {
+            return 1;
+        }
+        else if (other.ManaCost > this.ManaCost)
+        {
+            return -1;
+        }
+        else
+        {
+            // if mana costs are equal sort in alphabetical order
+            return name.CompareTo(other.name);
+        }
+    }
+
+    // Define the is greater than operator.
+    public static bool operator >  (CardAsset operand1, CardAsset operand2)
+    {
+        return operand1.CompareTo(operand2) == 1;
+    }
+
+    // Define the is less than operator.
+    public static bool operator <  (CardAsset operand1, CardAsset operand2)
+    {
+        return operand1.CompareTo(operand2) == -1;
+    }
+
+    // Define the is greater than or equal to operator.
+    public static bool operator >=  (CardAsset operand1, CardAsset operand2)
+    {
+        return operand1.CompareTo(operand2) >= 0;
+    }
+
+    // Define the is less than or equal to operator.
+    public static bool operator <=  (CardAsset operand1, CardAsset operand2)
+    {
+        return operand1.CompareTo(operand2) <= 0;
+    }
 
 }
