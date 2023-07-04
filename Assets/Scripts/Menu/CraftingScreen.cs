@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public class RarityTradingCost
@@ -20,9 +21,9 @@ public class CraftingScreen : MonoBehaviour {
     public GameObject CreatureCard;
     public GameObject SpellCard;
 
-    public Text CraftText;
-    public Text DisenchantText;
-    public Text QuantityText;
+    public TextMeshProUGUI CraftText;
+    public TextMeshProUGUI DisenchantText;
+    public TextMeshProUGUI QuantityText;
 
     public RarityTradingCost[] TradingCostsArray;
 

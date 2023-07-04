@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 using UnityEngine.EventSystems;
 
 public class DeckInScrollList : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
     public Image AvatarImage;
-    public Text NameText;
+    public TextMeshProUGUI NameText;
     public GameObject DeleteDeckButton;
     public DeckInfo savedDeckInfo;
 

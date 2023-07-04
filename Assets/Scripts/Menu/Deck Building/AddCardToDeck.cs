@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using TMPro;
 
 public class AddCardToDeck : MonoBehaviour {
 
-    public Text QuantityText;
+    public TextMeshProUGUI QuantityText;
     private float InitialScale;
-    private float scaleFactor = 1.1f;
+    private float scaleFactor = 2f;
     private CardAsset cardAsset;
 
     void Awake()
@@ -38,10 +39,12 @@ public class AddCardToDeck : MonoBehaviour {
 
     void OnMouseEnter()
     {        
+        
         if (CraftingScreen.Instance.Visible)
             return;
 
         transform.DOScale(InitialScale*scaleFactor, 0.5f);
+        //InitialScale = 34f;
     }
 
     void OnMouseExit()

@@ -131,7 +131,7 @@ public class CollectionBrowser : MonoBehaviour {
     public void ShowCollectionForBrowsing()
     {
         // reset keyword input field, reset toggle, reset mana filter:
-        KeywordInputFieldScript.Clear();
+        // KeywordInputFieldScript.Clear();
         CardsThatYouDoNotHaveToggleScript.SetValue(false);
         ManaFilterSctipt.RemoveAllFilters();
 
@@ -154,8 +154,8 @@ public class CollectionBrowser : MonoBehaviour {
         ShowCards(false, 0, true, false, RarityOptions.Basic, _character, "", -1, false);
 
         // select a tab with class cards by default
-        DeckBuildingScreen.Instance.TabsScript.ClassTab.Select(instant: true);
-        DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.ClassTab, instant: true);
+        // DeckBuildingScreen.Instance.TabsScript.ClassTab.Select(instant: true);
+        // DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.ClassTab, instant: true);
     }
 
     public void ClearCreatedCards()

@@ -31,7 +31,7 @@ public class DeckBuildingScreen : MonoBehaviour {
         BuilderScript.InDeckBuildingMode = false;
         ListOfReadyMadeDecksScript.UpdateList();
 
-        // CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
+        CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
         CollectionBrowserScript.OneCharacterTabs.gameObject.SetActive(false);
         Canvas.ForceUpdateCanvases();
 
@@ -44,8 +44,8 @@ public class DeckBuildingScreen : MonoBehaviour {
         ReadyDecksList.SetActive(false);
         CardsInDeckList.SetActive(true);
 
-        CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(false);
-        CollectionBrowserScript.OneCharacterTabs.gameObject.SetActive(true);
+        CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
+        CollectionBrowserScript.OneCharacterTabs.gameObject.SetActive(false);
         Canvas.ForceUpdateCanvases();
         // TODO: update the tab to say the name of the character class that we are building a deck for, update the script on the tab.
     }
