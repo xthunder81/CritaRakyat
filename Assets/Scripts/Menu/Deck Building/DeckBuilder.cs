@@ -121,7 +121,7 @@ public class DeckBuilder : MonoBehaviour
         }
 
         // apply character class and activate tab.
-        DeckBuildingScreen.Instance.TabsScript.SetClassOnClassTab(asset);
+        // DeckBuildingScreen.Instance.TabsScript.SetClassOnClassTab(asset);
         DeckBuildingScreen.Instance.CollectionBrowserScript.ShowCollectionForDeckBuilding(asset);
 
         CheckDeckCompleteFrame();

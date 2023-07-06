@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CardNameRibbon : MonoBehaviour {
 
-    public Text NameText;
-    public Text QuantityText;
+    public TextMeshProUGUI NameText;
+    public TextMeshProUGUI QuantityText;
     public Image RibbonImage;
 
     public CardAsset Asset{get; set;}

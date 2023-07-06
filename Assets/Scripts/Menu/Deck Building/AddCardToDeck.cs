@@ -44,7 +44,6 @@ public class AddCardToDeck : MonoBehaviour {
             return;
 
         transform.DOScale(InitialScale*scaleFactor, 0.5f);
-        //InitialScale = 34f;
     }
 
     void OnMouseExit()

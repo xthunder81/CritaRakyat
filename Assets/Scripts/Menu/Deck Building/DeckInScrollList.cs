@@ -35,7 +35,7 @@ public class DeckInScrollList : MonoBehaviour, IPointerEnterHandler, IPointerExi
         // 4) when we press "Done", this deck with changes will be added as a new deck
 
         // apply character class and activate tab.
-        DeckBuildingScreen.Instance.TabsScript.SetClassOnClassTab(savedDeckInfo.Character);
+        // DeckBuildingScreen.Instance.TabsScript.SetClassOnClassTab(savedDeckInfo.Character);
         DeckBuildingScreen.Instance.CollectionBrowserScript.ShowCollectionForDeckBuilding(savedDeckInfo.Character);
         // TODO: save the index of this deck not to make it shift to the end of the list of decks and add it to the same place.
 

@@ -29,6 +29,8 @@ public class DeckBuildingScreen : MonoBehaviour {
         ReadyDecksList.SetActive(true);
         CardsInDeckList.SetActive(false);
         BuilderScript.InDeckBuildingMode = false;
+        // TabsScript.gameObject.SetActive(true);
+        
         ListOfReadyMadeDecksScript.UpdateList();
 
         CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
@@ -43,6 +45,7 @@ public class DeckBuildingScreen : MonoBehaviour {
         ScreenContent.SetActive(true);
         ReadyDecksList.SetActive(false);
         CardsInDeckList.SetActive(true);
+        // TabsScript.gameObject.SetActive(true);
 
         CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
         CollectionBrowserScript.OneCharacterTabs.gameObject.SetActive(false);
@@ -54,7 +57,8 @@ public class DeckBuildingScreen : MonoBehaviour {
     {
         ShowScreenForDeckBuilding();
         CollectionBrowserScript.ShowCollectionForDeckBuilding(asset);
-        DeckBuildingScreen.Instance.TabsScript.SetClassOnClassTab(asset);
+        // DeckBuildingScreen.Instance.TabsScript.SetClassOnClassTab(asset);
+        // DeckBuildingScreen.Instance.TabsScript.Set;
         BuilderScript.BuildADeckFor(asset);
     }
 
