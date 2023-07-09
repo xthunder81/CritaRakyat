@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using TMPro;
 
 public class DeckIcon : MonoBehaviour 
 {
-    public Text DeckNameText; 
+    public TextMeshProUGUI DeckNameText; 
     public GameObject DeckNotCompleteObject;
     private PlayerPortraitVisual portrait;
     private float InitialScale;

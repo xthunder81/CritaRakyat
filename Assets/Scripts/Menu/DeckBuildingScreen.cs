@@ -47,8 +47,8 @@ public class DeckBuildingScreen : MonoBehaviour {
         CardsInDeckList.SetActive(true);
         // TabsScript.gameObject.SetActive(true);
 
-        CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
-        CollectionBrowserScript.OneCharacterTabs.gameObject.SetActive(false);
+        CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(false);
+        CollectionBrowserScript.OneCharacterTabs.gameObject.SetActive(true);
         Canvas.ForceUpdateCanvases();
         // TODO: update the tab to say the name of the character class that we are building a deck for, update the script on the tab.
     }

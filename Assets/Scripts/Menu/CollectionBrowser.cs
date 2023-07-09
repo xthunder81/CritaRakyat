@@ -154,10 +154,10 @@ public class CollectionBrowser : MonoBehaviour {
         ShowCards(false, 0, true, false, RarityOptions.Basic, _character, "", -1, false);
 
         // select a tab with class cards by default
-        DeckBuildingScreen.Instance.TabsScript.ClassTab.Select(instant: true);
-        // DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);
-        DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.ClassTab, instant: true);
-        // DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing, instant: true);
+        // DeckBuildingScreen.Instance.TabsScript.ClassTab.Select(instant: true);
+        DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);
+        // DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.ClassTab, instant: true);
+        DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing, instant: true);
     }
 
     public void ClearCreatedCards()
