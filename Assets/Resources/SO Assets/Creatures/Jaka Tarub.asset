@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Jaka Tarub
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: 
-  Story: 
+  Story: Jaka Tarub Atau Ki Ageng Tarub merupakan Kisah Cerita Rakyat yang berasal
+    dari Jawa Timur,
   storyType: 2
   Rarity: 4
   TypeOfCard: 0
