@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LowCreature
+  - TopCreature
+  - LowHand
+  - TopHand
+  - LowCard
+  - TopCard
+  - LowPlayer
+  - TopPlayer
   layers:
   - Default
   - TransparentFX
@@ -40,4 +48,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cards
+    uniqueID: 2955259121
+    locked: 0
+  - name: Creature
+    uniqueID: 4182217977
+    locked: 0
+  - name: AboveEverything
+    uniqueID: 241417877
     locked: 0
