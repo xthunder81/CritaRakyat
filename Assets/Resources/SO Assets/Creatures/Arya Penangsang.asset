@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Arya Penangsang
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: 
-  Story: 
+  Story: Arya Penangsang merupakan salah satu tokoh Cerita Rakyat yang berasalah
+    dari Jawa Tengah
   storyType: 2
   Rarity: 3
   TypeOfCard: 0

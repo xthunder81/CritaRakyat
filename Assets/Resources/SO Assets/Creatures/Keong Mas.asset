@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Keong Mas
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: 
-  Story: 
+  Story: 'Keong Mas atau Candra Kirana merupakan tokoh dari Cerita Rakyat Keong Mas
+    yang berasal dari Jawa Timur, Keong Mas merupakan anak bungsu dari 2 bersaudari,
+    Keong Mas Di kutuk menjadi keong '
   storyType: 3
   Rarity: 2
   TypeOfCard: 0

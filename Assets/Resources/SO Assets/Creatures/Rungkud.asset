@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Rungkud
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: 
-  Story: 
+  Story: Rungkud merupakan salah satu tokoh cerita dari cerita rakyat Arya Penangsang
+    yang berasal dari Jawa Tengah, menurut kisahnya Rungkud Merupakan pemimpin dari
+    Pasukan Sureng milik Arya Penangsang
   storyType: 2
-  rarityOptions: 0
-  typeOfCard: 0
+  Rarity: 0
+  TypeOfCard: 0
   CardImage: {fileID: 0}
   ManaCost: 1
   TokenCard: 0
@@ -25,6 +28,7 @@ MonoBehaviour:
   MaxHealth: 2
   Attack: 1
   AttacksForOneTurn: 1
+  Taunt: 0
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0

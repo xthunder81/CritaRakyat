@@ -15,8 +15,15 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
-  Story: Jaka Tarub Atau Ki Ageng Tarub merupakan Kisah Cerita Rakyat yang berasal
-    dari Jawa Timur,
+  Story: 'Jaka Tarub atau Ki Ageng Tarub merupakan salah satu tokoh Kisah Cerita
+    Rakyat Jaka  Tarub dan 7 Bidadari atau nama terkenalnya 7 Wonders yang berasal
+    dari Jawa Timur, Jaka Tarub merupakan serorang pemburu hebat yang tanpa sengaja
+    melihat 7 bidadari sedang mandi.
+
+
+    Terpikat oleh kecantikan para bidadari
+    tersebut Jaka Tarub mencuri salah satu bidadari tersebut dan menyembunyikannya
+    di kotak yang berada di tumpukan padi.'
   storyType: 2
   Rarity: 4
   TypeOfCard: 0
