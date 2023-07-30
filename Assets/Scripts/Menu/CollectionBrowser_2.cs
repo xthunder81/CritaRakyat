@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectionBrowser : MonoBehaviour {
+public class CollectionBrowser_2 : MonoBehaviour {
 
     public Transform[] Slots;
     public GameObject SpellMenuPrefab;
@@ -138,27 +138,8 @@ public class CollectionBrowser : MonoBehaviour {
         ShowCards(false, 0, true, false, RarityOptions.Basic, null, "", -1, false);
 
         // select neutral tab by default:
-        DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);   
-        DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing, instant: true);
-    }
-
-    public void ShowCollectionForDeckBuilding(CharacterAsset buildingForThisCharacter)
-    {
-        // reset keyword input field, reset toggle, reset mana filter:
-        // KeywordInputFieldScript.Clear();
-        CardsThatYouDoNotHaveToggleScript.SetValue(false);
-        ManaFilterSctipt.RemoveAllFilters();
-
-        _character = buildingForThisCharacter;
-
-        // ShowCards(false, 0, true, false, RarityOptions.Basic, _character, "", -1, false);
-        ShowCards(false, 0, true, false, RarityOptions.Basic, null, "", -1, false);
-
-        // select a tab with class cards by default
-        DeckBuildingScreen.Instance.TabsScript.ClassTab.Select(instant: true);
-        // DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);
-        DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.ClassTab, instant: true);
-        // DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing, instant: true);
+        CardCollectionsScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);   
+        CardCollectionsScreen.Instance.TabsScript.SelectTab(CardCollectionsScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing, instant: true);
     }
 
     public void ClearCreatedCards()
@@ -234,9 +215,9 @@ public class CollectionBrowser : MonoBehaviour {
             manager.cardAsset = CardsOnThisPage[i];
             manager.ReadCardFromAsset();
 
-            AddCardToDeck addCardComponent = newMenuCard.GetComponent<AddCardToDeck>();
-            addCardComponent.SetCardAsset(CardsOnThisPage[i]);
-            addCardComponent.UpdateQuantity();
+            // AddCardToDeck addCardComponent = newMenuCard.GetComponent<AddCardToDeck>();
+            // addCardComponent.SetCardAsset(CardsOnThisPage[i]);
+            // addCardComponent.UpdateQuantity();
         }
     }
 
