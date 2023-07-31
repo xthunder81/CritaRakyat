@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 229e37b2f0b1e0442888298cc0553a1b
+guid: 58e16d55b4f546a45bf3d1e6ac8718f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -126,7 +126,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -138,7 +138,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -153,43 +153,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frame2_0
+      name: frame 1.1_0
       rect:
         serializedVersion: 2
-        x: 273
-        y: 1808
-        width: 1546
-        height: 933
+        x: 0
+        y: 2713
+        width: 1478
+        height: 890
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d94efc7a4b6a0c4ab1d0bc68cfc6937
-      internalID: 283078382
+      spriteID: 6cf0e76653a185d498efe375de960209
+      internalID: -917472365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frame2_1
+      name: frame 1.1_1
       rect:
         serializedVersion: 2
-        x: 5748
-        y: 1799
-        width: 1586
-        height: 951
+        x: 5466
+        y: 1373
+        width: 1500
+        height: 867
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45ffa7d3424718b4ea5e3119997536fb
-      internalID: 308788079
+      spriteID: 321dbe86007d4d44fb0a684e10efed82
+      internalID: -748788139
       vertices: []
       indices: 
       edges: []
@@ -205,8 +205,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      frame2_0: 283078382
-      frame2_1: 308788079
+      frame 1.1_0: -917472365
+      frame 1.1_1: -748788139
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
