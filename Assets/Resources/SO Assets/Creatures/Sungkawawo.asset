@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41e206fc57f453a42b932de9e94caabf, type: 3}
-  m_Name: test1
+  m_Name: Sungkawawo
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
   Story: 
-  storyType: 3
-  Rarity: 0
+  storyType: 2
+  Rarity: 1
   TypeOfCard: 0
   CardImage: {fileID: 0}
-  ManaCost: 1
+  ManaCost: 2
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
-  MaxHealth: 1
-  Attack: 1
+  MaxHealth: 2
+  Attack: 2
   AttacksForOneTurn: 1
   Taunt: 0
   Charge: 0

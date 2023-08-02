@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: Dewi Galuh
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: Deal 2 Damage To Enemy Creature
-  Story: 
+  Story: 'Dewi Galuh Merupakan salah satu tokoh dari dongeng cerita rakyat Keong
+    Mas, Dewi Galuh adalah kakak dari Keong Mas atau Candra Kirana.
+
+
+    Dalam Kisah
+    yang dicerita kan Dewi Galuh sangat iri akan kecantikan dan kebaikan hati Keong
+    Mas dan menjadi lebih parah setelah mendengar bahwa Raden Inu Kertapati akan
+    meminang Keong Mas yang akhir membuat Dewi Galuh meminta pertolongan nenek sihir
+    untuk mengutuk Candra Kirana dan akhirnya Candra Kirana dikutuk menjadi Keong
+    Mas'
   storyType: 3
   Rarity: 3
   TypeOfCard: 1

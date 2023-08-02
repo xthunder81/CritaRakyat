@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: Nawang Wulan
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: Heal 4 Heath to Player Character
-  Story: 
+  Story: 'Nawang Wulan merupakan salah satu tokoh Kisah Cerita Rakyat Jaka  Tarub
+    dan 7 Bidadari atau nama terkenalnya 7 Wonders yang berasal dari Jawa Tengah,
+    Nawang Wulan merupakan seorang Bidadari yang menjadi istri dari Jaka Tarub.
+
+
+    Nawang
+    Wulan beserta 6 saudari nya mandi di di telaga namun saat selesai selendang Nawang
+    Wulan tidak ada yang akhirnya tidak bisa kembali ke kayhangan, pada saat itu
+    munculah Jaka Tarub dan menolong Nawang Wulan dan akhirnya menikah.'
   storyType: 2
   Rarity: 4
   TypeOfCard: 1

@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Sepasang Sandal
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: 
   Story: 
   storyType: 3
   Rarity: 2
   TypeOfCard: 1
   CardImage: {fileID: 0}
-  ManaCost: 0
+  ManaCost: 1
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
   MaxHealth: 0

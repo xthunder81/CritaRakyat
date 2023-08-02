@@ -46,7 +46,7 @@ public class AddCardToDeck : MonoBehaviour,IPointerClickHandler
         if (CraftingScreen.Instance.Visible)
             return;
 
-        // transform.DOScale(InitialScale * scaleFactor, 0.5f);
+        transform.DOScale(InitialScale * scaleFactor, 0.5f);
     }
 
     void OnMouseExit()
@@ -55,7 +55,7 @@ public class AddCardToDeck : MonoBehaviour,IPointerClickHandler
         // if (CraftingScreen.Instance.Visible)
         //return;
 
-        // transform.DOScale(InitialScale, 0.5f);
+        transform.DOScale(InitialScale, 0.5f);
     }
 
     void Update()
@@ -71,38 +71,31 @@ public class AddCardToDeck : MonoBehaviour,IPointerClickHandler
         }
     }
 
-    // public void OnPointerClick(PointerEventData eventData) {
-    //     if (eventData.clickCount >= clickCount) {
-            
-    //     }
-    // }
-
-
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.clickCount == 2)
-        {
-            Ray clickPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitPoint;
+        // if (eventData.clickCount == 2)
+        // {
+        //     Ray clickPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //     RaycastHit hitPoint;
 
-            // See if the ray collided with an object
-            if (Physics.Raycast(clickPoint, out hitPoint))
-            {
-                // Make sure this object was the
-                // one that received the right-click
-                if (hitPoint.collider == this.GetComponent<Collider>())
-                {
-                    // Put code for the right click event
-                    //Debug.Log("Right Clicked on " + this.name);
-                    Debug.Log("double click");
+        //     // See if the ray collided with an object
+        //     if (Physics.Raycast(clickPoint, out hitPoint))
+        //     {
+        //         // Make sure this object was the
+        //         // one that received the right-click
+        //         if (hitPoint.collider == this.GetComponent<Collider>())
+        //         {
+        //             // Put code for the right click event
+        //             //Debug.Log("Right Clicked on " + this.name);
+        //             Debug.Log("double click");
 
-                    // show craft/disenchant info
-                    CraftingScreen.Instance.ShowCraftingScreen(GetComponent<OneCardManager>().cardAsset);
-                }
-            }
-            Debug.Log("double click");
-        }
+        //             // show craft/disenchant info
+        //             CraftingScreen.Instance.ShowCraftingScreen(GetComponent<OneCardManager>().cardAsset);
+        //         }
+        //     }
+        //     Debug.Log("double click");
+        // }
     }
 
     // Check for Right-Click
