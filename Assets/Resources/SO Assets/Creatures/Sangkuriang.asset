@@ -15,11 +15,25 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
-  Story: 
+  Story: 'Sangkuriang merupakan salah satu tokoh cerita rakyat Asal Usul Tangkuban
+    Perahu, Jawa Barat. Sangkuriang merupakan seorang pemuda yang dimana jatuh cinta
+    kepada ibu nya sendiri.
+
+
+    namun ibunya tidak menginginkan nya sehingga membuat
+    persyaratan bahwa Dayang Sumbi akan menikahi Sangkuriang bila berhasil membangun
+    bendungan dan sampan besar, karena Sangkuriang yang sakti beliau meminta bantuang
+    mahluk gaib untuk menyelesaikan persyaratan tersebut.
+
+
+    namun hal tersebut
+    digagalkan oleh kecerdikan Dayang Sumbi sehingga Sangkuriang gagal memenuhi persyaratan
+    tersebut, sangking marahnya Sangkuriang menendang perahu buatannya dan menjadi
+    Gunung Tangkuban.'
   storyType: 2
   Rarity: 0
   TypeOfCard: 0
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: 512e43f9e53f71f4094b18e20c231b22, type: 3}
   ManaCost: 4
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1

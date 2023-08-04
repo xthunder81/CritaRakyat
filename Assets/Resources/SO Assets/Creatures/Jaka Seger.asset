@@ -15,8 +15,14 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
-  Story: 'Jaka Seger merupakan salah satu tokoh cerita rakyat '
-  storyType: 3
+  Story: 'Jaka Seger merupakan salah satu tokoh cerita rakyat Asal Usul Suku Tenggeryang
+    berasal dari Jawa Timur, Jaka Seger merupakan serorang pemuda biasa yang lahir
+    dan hidup di sekitar Lereng Gunung Bromo.
+
+
+    kemudian menikah dengan Rara
+    Anteng dan di karuniai 25 anak.'
+  storyType: 2
   Rarity: 2
   TypeOfCard: 0
   CardImage: {fileID: 21300000, guid: 7173647afa7b7894f97a0ab4735a3b3a, type: 3}

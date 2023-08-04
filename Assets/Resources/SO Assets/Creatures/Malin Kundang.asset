@@ -15,7 +15,16 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
-  Story: 
+  Story: 'Malin Kundang merupakan salah satu cerita rakyat yang berasal dari Sumatra
+    Barat, Malin Kundang merupakan anak dari Mande Rubayah.
+
+
+    Setelah Dewasa
+    Malin Kundang merantau demi merubah nasib, dalam perjalanannya Malin Kundang
+    menjadi sukses dan menikahi anak dari seorang saudagar. namun dalam perjalanannya
+    kembalinya Malin Kundang bertemu dengan Mande Rubayah dan tidak mengakuinya sebagai
+    ibu kandungannya dikarenakan malu dengan penampilan Mande Rubayah yang akhirnya
+    Malin Kundang dikutuk menjadi batu.'
   storyType: 2
   Rarity: 3
   TypeOfCard: 0
