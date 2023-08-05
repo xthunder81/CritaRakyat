@@ -608,8 +608,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -1478,10 +1478,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 14.733733, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &55279689
 GameObject:
@@ -3520,7 +3520,7 @@ GameObject:
   - component: {fileID: 214916871}
   - component: {fileID: 214916872}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: Toggle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3596,8 +3596,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 214916872}
-        m_TargetAssemblyTypeName: CardsThatYouDoNotHaveToggle, Assembly-CSharp
-        m_MethodName: ValueChanged
+        m_TargetAssemblyTypeName: CCToggle, Assembly-CSharp
+        m_MethodName: ccValueChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3617,7 +3617,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 214916869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b27caa99891888248a106105731da4b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e645e3eb86f2764a94181f9a68d8522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &217179137
@@ -4516,41 +4516,14 @@ GameObject:
   - component: {fileID: 243159165}
   - component: {fileID: 243159164}
   - component: {fileID: 243159163}
-  - component: {fileID: 243159161}
+  - component: {fileID: 243159166}
   m_Layer: 5
-  m_Name: ManaFilter
+  m_Name: ManaFilter2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &243159161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243159160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 273e352ca8878ec42aeeb49040a34c9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Crystals:
-  - {fileID: 1975640464}
-  - {fileID: 843702509}
-  - {fileID: 259986954}
-  - {fileID: 818122920}
-  - {fileID: 1232028251}
-  - {fileID: 1932522163}
-  - {fileID: 36795334}
-  - {fileID: 833817705}
-  HighlightedColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  UnactiveColor:
-    serializedVersion: 2
-    rgba: 4286611584
 --- !u!224 &243159162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4643,6 +4616,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243159160}
   m_CullTransparentMesh: 1
+--- !u!114 &243159166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243159160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65c38a885e1b124985e04c432f5a7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Crystals:
+  - {fileID: 1975640464}
+  - {fileID: 843702509}
+  - {fileID: 259986954}
+  - {fileID: 818122920}
+  - {fileID: 1232028251}
+  - {fileID: 1932522163}
+  - {fileID: 36795334}
+  - {fileID: 833817705}
+  HighlightedColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  UnactiveColor:
+    serializedVersion: 2
+    rgba: 4286611584
 --- !u!1 &244839141
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,8 +5134,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -10897,10 +10897,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.13613, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &609408518
 PrefabInstance:
@@ -11652,10 +11652,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 162.07106, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &635111574
 GameObject:
@@ -13954,8 +13954,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -14378,8 +14378,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -14638,8 +14638,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -17867,10 +17867,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73.66866, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1000596851
 GameObject:
@@ -21898,8 +21898,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -22205,7 +22205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1242481165
 Transform:
   m_ObjectHideFlags: 0
@@ -24801,7 +24801,7 @@ MonoBehaviour:
   AllCharactersTabs: {fileID: 1141571524}
   KeywordInputFieldScript: {fileID: 0}
   CardsThatYouDoNotHaveToggleScript: {fileID: 214916872}
-  ManaFilterSctipt: {fileID: 243159161}
+  ManaFilterSctipt: {fileID: 243159166}
 --- !u!1 &1487766428
 GameObject:
   m_ObjectHideFlags: 0
@@ -25858,10 +25858,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 132.60359, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1548621942
 GameObject:
@@ -31581,10 +31581,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44.2012, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1865931574
 GameObject:
@@ -32473,8 +32473,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -33588,8 +33588,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243159161}
-        m_TargetAssemblyTypeName: ManaFilter, Assembly-CSharp
+      - m_Target: {fileID: 243159166}
+        m_TargetAssemblyTypeName: CCManaFilter, Assembly-CSharp
         m_MethodName: PressOnCrystal
         m_Mode: 3
         m_Arguments:
@@ -33763,10 +33763,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 221.006, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1995516535
 MonoBehaviour:
@@ -34493,10 +34493,10 @@ RectTransform:
   m_Father: {fileID: 1749856040}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 191.53853, y: -18.276321}
-  m_SizeDelta: {x: 29.467466, y: 36.552643}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2033747134
 PrefabInstance:
@@ -40895,9 +40895,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3400995004789509769
 MonoBehaviour:
@@ -41007,7 +41007,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00028052318}
-  m_SizeDelta: {x: 0, y: 10}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3400995004976501306
 MonoBehaviour:
@@ -41255,7 +41255,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

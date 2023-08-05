@@ -15,6 +15,7 @@ public class OneCardManager : MonoBehaviour {
     public TextMeshProUGUI StoryText;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI AttackText;
+    public TextMeshProUGUI StoryType;
     [Header("Image References")]
     public Image CardTopRibbonImage;
     // public Image CardLowRibbonImage;
@@ -91,6 +92,11 @@ public class OneCardManager : MonoBehaviour {
         if (StoryText != null)
         {
             StoryText.text = cardAsset.Story.ToString();
+        }
+
+        if (StoryType != null)
+        {
+            StoryType.text = cardAsset.storyType.ToString();
         }
     }
 }
