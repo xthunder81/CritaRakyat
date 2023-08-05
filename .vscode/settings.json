@@ -58,6 +58,6 @@
         "Temp/":true
     },
     "omnisharp.enableRoslynAnalyzers": true,
-    "dotnet.defaultSolution": "battlecard.sln",
+    "dotnet.defaultSolution": "CritaRakyat.sln",
     "omnisharp.useModernNet": false
 }

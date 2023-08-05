@@ -31586,6 +31586,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1860845499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860845501}
+  - component: {fileID: 1860845500}
+  m_Layer: 0
+  m_Name: StoryTypeColors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1860845500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860845499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363152bb59e09b54a9b63032529e1122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+  - options: 0
+    color:
+      serializedVersion: 2
+      rgba: 419209
+  - options: 1
+    color:
+      serializedVersion: 2
+      rgba: 65283
+  - options: 2
+    color:
+      serializedVersion: 2
+      rgba: 16586546
+  - options: 3
+    color:
+      serializedVersion: 2
+      rgba: 10748159
+--- !u!4 &1860845501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860845499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865931574
 GameObject:
   m_ObjectHideFlags: 0
@@ -38935,11 +38996,13 @@ MonoBehaviour:
   StoryText: {fileID: 232634237}
   HealthText: {fileID: 9198565089285354709}
   AttackText: {fileID: 2628262132489755663}
+  StoryType: {fileID: 0}
   CardTopRibbonImage: {fileID: 8230261397083752027}
   CardGraphicImage: {fileID: 5664469576341959535}
   CardBodyImage: {fileID: 3151238716642172219}
   CardFaceFrameImage: {fileID: 4667850516298356160}
   CardFaceGlowImage: {fileID: 713309883485971702}
+  RarityStoneImage: {fileID: 0}
 --- !u!1 &2429494660570090158
 GameObject:
   m_ObjectHideFlags: 0
@@ -41522,11 +41585,13 @@ MonoBehaviour:
   StoryText: {fileID: 232634237}
   HealthText: {fileID: 0}
   AttackText: {fileID: 0}
+  StoryType: {fileID: 0}
   CardTopRibbonImage: {fileID: 7002700519039857229}
   CardGraphicImage: {fileID: 6738908101413914489}
   CardBodyImage: {fileID: 4080866874797320493}
   CardFaceFrameImage: {fileID: 6043511255775289814}
   CardFaceGlowImage: {fileID: 1945409529423139040}
+  RarityStoneImage: {fileID: 0}
 --- !u!114 &3643804750196267287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42842,7 +42907,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4681853703847688048, guid: cd0abf998363bda4db78ed32b3ad1da5, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4681853703847688048, guid: cd0abf998363bda4db78ed32b3ad1da5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45307,11 +45372,13 @@ MonoBehaviour:
   StoryText: {fileID: 0}
   HealthText: {fileID: 0}
   AttackText: {fileID: 0}
+  StoryType: {fileID: 0}
   CardTopRibbonImage: {fileID: 440122490024280672}
   CardGraphicImage: {fileID: 4228984646724613972}
   CardBodyImage: {fileID: 6887992686086543616}
   CardFaceFrameImage: {fileID: 3813400307431444987}
   CardFaceGlowImage: {fileID: 9064142684611125453}
+  RarityStoneImage: {fileID: 0}
 --- !u!1 &6168575472570093205
 GameObject:
   m_ObjectHideFlags: 0
@@ -45720,11 +45787,13 @@ MonoBehaviour:
   StoryText: {fileID: 0}
   HealthText: {fileID: 285592189237047177}
   AttackText: {fileID: 6352337001158117203}
+  StoryType: {fileID: 0}
   CardTopRibbonImage: {fileID: 1037725129493814535}
   CardGraphicImage: {fileID: 3660656504894040115}
   CardBodyImage: {fileID: 6334889337344886375}
   CardFaceFrameImage: {fileID: 4365949513452899996}
   CardFaceGlowImage: {fileID: 8482337673061924778}
+  RarityStoneImage: {fileID: 0}
 --- !u!114 &6738908101413914489
 MonoBehaviour:
   m_ObjectHideFlags: 0

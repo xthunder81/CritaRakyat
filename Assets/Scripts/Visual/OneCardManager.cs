@@ -18,12 +18,11 @@ public class OneCardManager : MonoBehaviour {
     public TextMeshProUGUI StoryType;
     [Header("Image References")]
     public Image CardTopRibbonImage;
-    // public Image CardLowRibbonImage;
     public Image CardGraphicImage;
     public Image CardBodyImage;
     public Image CardFaceFrameImage;
     public Image CardFaceGlowImage;
-    // public Image CardBackGlowImage;
+    public Image RarityStoneImage;
 
     void Awake()
     {
@@ -51,20 +50,7 @@ public class OneCardManager : MonoBehaviour {
     {
         // universal actions for any Card
         // 1) apply tint
-        if (cardAsset.characterAsset != null)
-        {
-            CardBodyImage.color = cardAsset.characterAsset.ClassCardTint;
-            CardFaceFrameImage.color = cardAsset.characterAsset.ClassCardTint;
-            CardTopRibbonImage.color = cardAsset.characterAsset.ClassRibbonsTint;
-            // CardLowRibbonImage.color = cardAsset.characterAsset.ClassRibbonsTint;
-        }
-        else
-        {
-            //CardBodyImage.color = GlobalSettings.Instance.CardBodyStandardColor;
-            // CardFaceFrameImage.color = Color.white;
-            //CardTopRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
-            //CardLowRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
-        }
+        CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
         // 2) add card name
         NameText.text = cardAsset.name;
         // 3) add mana cost
@@ -98,5 +84,11 @@ public class OneCardManager : MonoBehaviour {
         {
             StoryType.text = cardAsset.storyType.ToString();
         }
+
+        if (RarityStoneImage != null)
+        {
+            RarityStoneImage.color = RarityColors.Instance.ColorsDictionary[cardAsset.Rarity];
+        }
+        
     }
 }
