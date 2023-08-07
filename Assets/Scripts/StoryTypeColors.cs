@@ -6,14 +6,14 @@ using UnityEngine;
 public class StoryTypeData
 {
     public StoryType options;
-    public Color32 color;
+    public Color color;
 }
 
 public class StoryTypeColors : MonoBehaviour
 {
     //Get StoryType Color Data
-    public StoryTypeData[] data;
-    public Dictionary<StoryType, Color32> colorDictionary = new Dictionary<StoryType, Color32>();
+    public StoryTypeData[] Data;
+    public Dictionary<StoryType, Color> colorDictionary = new Dictionary<StoryType, Color>();
 
     public static StoryTypeColors Instance;
 
@@ -25,7 +25,7 @@ public class StoryTypeColors : MonoBehaviour
 
         DontDestroyOnLoad(this);
 
-        foreach (StoryTypeData d in data)
+        foreach (StoryTypeData d in Data)
         {
             colorDictionary.Add(d.options, d.color);
         }

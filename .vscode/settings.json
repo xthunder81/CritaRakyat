@@ -57,7 +57,5 @@
         "temp/":true,
         "Temp/":true
     },
-    "omnisharp.enableRoslynAnalyzers": true,
-    "dotnet.defaultSolution": "CritaRakyat.sln",
-    "omnisharp.useModernNet": false
+    "dotnet.defaultSolution": "D:/Kuliah/ITATS/Skripsi/Project/CritaRakyat/CritaRakyat.sln"
 }

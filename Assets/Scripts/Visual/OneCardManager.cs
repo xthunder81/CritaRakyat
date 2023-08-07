@@ -50,7 +50,13 @@ public class OneCardManager : MonoBehaviour {
     {
         // universal actions for any Card
         // 1) apply tint
-        CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
+        // CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
+        if (CardFaceFrameImage != null) 
+        {
+            // if (cardAsset.storyType == 0)
+            //     CardFaceFrameImage.color = Color.;
+            CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
+        }
         // 2) add card name
         NameText.text = cardAsset.name;
         // 3) add mana cost
@@ -88,6 +94,7 @@ public class OneCardManager : MonoBehaviour {
         if (RarityStoneImage != null)
         {
             RarityStoneImage.color = RarityColors.Instance.ColorsDictionary[cardAsset.Rarity];
+            // RarityStoneImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
         }
         
     }
