@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 917561878a8602640ab159ede231f37f, type: 3}
-  m_Name: Rara_Anteng
+  m_Name: Deka
   m_EditorClassIdentifier: 
-  Class: 2
-  ClassName: Rara Anteng
+  Class: 1
+  ClassName: Jaka Seger
   MaxHealth: 20
   HeroPowerName: 
-  AvatarImage: {fileID: 21300000, guid: c231d6300cfd2d64497d0d0bb560f4c4, type: 3}
+  AvatarImage: {fileID: -1554984291, guid: 1ef89b3b3088d084db82e553d929c1c4, type: 3}
   HeroPowerIconImage: {fileID: 0}
   AvatarBGImage: {fileID: 0}
   HeroPowerBGImage: {fileID: 0}

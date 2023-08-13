@@ -74,9 +74,9 @@ public class AddCardToDeck : MonoBehaviour,IPointerClickHandler
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        // if (eventData.clickCount == 2)
+        // if (eventData.touchCount >= 2)
         // {
-        //     Ray clickPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //     Ray clickPoint = Camera.main.ScreenPointToRay(Input.touches[0].position);
         //     RaycastHit hitPoint;
 
         //     // See if the ray collided with an object
