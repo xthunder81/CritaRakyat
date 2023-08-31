@@ -7,7 +7,7 @@ public class Test_Achitectur : MonoBehaviour
 
     TextArchitect architect;
 
-    public GameObject textButton;
+    public TextArchitect.BuildMethod tabm = TextArchitect.BuildMethod.instant;
 
     //private string longLines;
 
@@ -24,7 +24,7 @@ public class Test_Achitectur : MonoBehaviour
     {
         dialogueSystem = DialogueSystem.Instance;
         architect = new TextArchitect(dialogueSystem.dialogueContainer.dialogText);
-        architect.buildMethod = TextArchitect.BuildMethod.typewriter;
+        architect.buildMethod = TextArchitect.BuildMethod.fade;
         architect.speed = 0.5f;
     }
 
@@ -32,6 +32,16 @@ public class Test_Achitectur : MonoBehaviour
     {
         string longLines = "Liam Sera Banfield is a reincarnator. He had reincarnated into a fantasy world of magic and swords, but at the time the civilization had already been making advancements into outer space.";
 
+        if (tabm != architect.buildMethod){
+            architect.buildMethod = tabm;
+            architect.Stop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            architect.Stop();
+        }
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {            
             if (architect.isBuilding)

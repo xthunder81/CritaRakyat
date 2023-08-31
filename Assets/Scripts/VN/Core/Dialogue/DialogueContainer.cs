@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using DIALOGUE;
 
 [System.Serializable]
 public class DialogueContainer
@@ -8,6 +9,6 @@ public class DialogueContainer
     public GameObject Root;
 
     [Header("Text Reference")]
-    public TextMeshProUGUI namaCharText;
+    public NameContainer nameContainer;
     public TextMeshProUGUI dialogText;
 }

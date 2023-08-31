@@ -180,7 +180,10 @@ public class TextArchitect
                 {
                     vertexColors[charInfo.vertexIndex + j] = colorVisible;
                 }
+            }
 
+            else
+            {
                 for (int j = 0; j < 4; j++)
                 {
                     vertexColors[charInfo.vertexIndex + j] = colorHidden;

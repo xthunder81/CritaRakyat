@@ -1,0 +1,6 @@
+{c}     = clear
+{a}     = append
+{wc n}  = wait clear
+{wa n}  = wait append
+
+speaker as character at 1:1 [0:angle, 1:Happy] "segment{c}segments" commands{args}
