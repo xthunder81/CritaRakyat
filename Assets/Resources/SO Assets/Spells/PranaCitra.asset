@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: PranaCitra
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
+  Tags: 
   Description: 
   Story: 
   storyType: 2
   Rarity: 1
   TypeOfCard: 1
   CardImage: {fileID: 0}
-  ManaCost: 0
+  ManaCost: 1
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
   MaxHealth: 0
@@ -29,6 +30,6 @@ MonoBehaviour:
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
+  SpellScriptName: DamageAllOpponentCreatures
+  specialSpellAmount: 1
   Targets: 0

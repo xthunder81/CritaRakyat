@@ -4,6 +4,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ShowCard : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class ShowCard : MonoBehaviour
         if (DetailScreenCard.Instance.Visible)
             return;
 
-        // transform.DOScale(InitialScale*scaleFactor, 0.5f);
+        transform.DOScale(InitialScale*scaleFactor, 0.5f);
     }
 
     void OnMouseExit()
@@ -47,7 +48,7 @@ public class ShowCard : MonoBehaviour
         // if (CraftingScreen.Instance.Visible)
             //return;
 
-        // transform.DOScale(InitialScale, 0.5f);
+        transform.DOScale(InitialScale, 0.5f);
     }
 
     // Check for Left-Click

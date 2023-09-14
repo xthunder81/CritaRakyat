@@ -9,9 +9,6 @@ public class CardCollectionsScreen : MonoBehaviour
     public CollectionBrowser_2 collectionBrowser;
     public CharacterSelectionTabs TabsScript;
 
-    // public CardsThatYouDoNotHaveToggle CardsThatYouDoNotHaveToggleScript;
-    // public ManaFilter ManaFilterSctipt;
-
     public static CardCollectionsScreen Instance;
 
     // Start is called before the first frame update

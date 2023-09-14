@@ -12,8 +12,8 @@ public class CollectionBrowser_2 : MonoBehaviour {
     public GameObject AllCharactersTabs;
 
     public KeywordInputField KeywordInputFieldScript;
-    public CardsThatYouDoNotHaveToggle CardsThatYouDoNotHaveToggleScript;
-    public ManaFilter ManaFilterSctipt;
+    public CCToggle CardsThatYouDoNotHaveToggleScript;
+    public CCManaFilter ManaFilterSctipt;
 
     private CharacterAsset _character;
 
@@ -132,8 +132,8 @@ public class CollectionBrowser_2 : MonoBehaviour {
     {
         // reset keyword input field, reset toggle, reset mana filter:
         // KeywordInputFieldScript.Clear();
-        CardsThatYouDoNotHaveToggleScript.SetValue(false);
-        ManaFilterSctipt.RemoveAllFilters();
+        CardsThatYouDoNotHaveToggleScript.ccSetValue(false);
+        ManaFilterSctipt.RemoveCrystalFilter();
 
         ShowCards(false, 0, true, false, RarityOptions.Basic, null, "", -1, false);
 

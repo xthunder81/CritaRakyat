@@ -22,10 +22,10 @@ public class PackOpeningArea : MonoBehaviour {
     // these are the glow colors that will show while opening cards
     // or you can use colors from  RarityColors
     [Header ("Colors")]
-    public Color32 LegendaryColor;
-    public Color32 EpicColor;
-    public Color32 RareColor;
-    public Color32 CommonColor;
+    public Color LegendaryColor;
+    public Color EpicColor;
+    public Color RareColor;
+    public Color CommonColor;
 
     public Dictionary<RarityOptions, Color32> GlowColorsByRarity = new Dictionary<RarityOptions, Color32>();
 

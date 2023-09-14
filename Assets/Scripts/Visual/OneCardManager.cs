@@ -15,14 +15,14 @@ public class OneCardManager : MonoBehaviour {
     public TextMeshProUGUI StoryText;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI AttackText;
+    public TextMeshProUGUI StoryType;
     [Header("Image References")]
     public Image CardTopRibbonImage;
-    // public Image CardLowRibbonImage;
     public Image CardGraphicImage;
     public Image CardBodyImage;
     public Image CardFaceFrameImage;
     public Image CardFaceGlowImage;
-    // public Image CardBackGlowImage;
+    public Image RarityStoneImage;
 
     void Awake()
     {
@@ -50,19 +50,12 @@ public class OneCardManager : MonoBehaviour {
     {
         // universal actions for any Card
         // 1) apply tint
-        if (cardAsset.characterAsset != null)
+        // CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
+        if (CardFaceFrameImage != null) 
         {
-            CardBodyImage.color = cardAsset.characterAsset.ClassCardTint;
-            CardFaceFrameImage.color = cardAsset.characterAsset.ClassCardTint;
-            CardTopRibbonImage.color = cardAsset.characterAsset.ClassRibbonsTint;
-            // CardLowRibbonImage.color = cardAsset.characterAsset.ClassRibbonsTint;
-        }
-        else
-        {
-            //CardBodyImage.color = GlobalSettings.Instance.CardBodyStandardColor;
-            // CardFaceFrameImage.color = Color.white;
-            //CardTopRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
-            //CardLowRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
+            // if (cardAsset.storyType == 0)
+            //     CardFaceFrameImage.color = Color.;
+            CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
         }
         // 2) add card name
         NameText.text = cardAsset.name;
@@ -92,5 +85,17 @@ public class OneCardManager : MonoBehaviour {
         {
             StoryText.text = cardAsset.Story.ToString();
         }
+
+        if (StoryType != null)
+        {
+            StoryType.text = cardAsset.storyType.ToString();
+        }
+
+        if (RarityStoneImage != null)
+        {
+            RarityStoneImage.color = RarityColors.Instance.ColorsDictionary[cardAsset.Rarity];
+            // RarityStoneImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
+        }
+        
     }
 }

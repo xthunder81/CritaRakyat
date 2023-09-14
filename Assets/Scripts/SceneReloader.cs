@@ -22,9 +22,4 @@ public class SceneReloader: MonoBehaviour {
         // SceneManager.LoadScene(sceneName);
         SceneManager.LoadScene(SceneName);
     }
-
-    public void Quit()
-    {
-        Application.Quit();
-    }
 }

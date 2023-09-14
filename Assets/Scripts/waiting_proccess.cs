@@ -20,6 +20,6 @@ public class waiting_proccess : MonoBehaviour
 
         SceneManager.LoadScene(sceneLoad);
     }
-
+    
 
 }
