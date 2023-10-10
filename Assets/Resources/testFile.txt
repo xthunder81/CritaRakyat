@@ -1,0 +1,27 @@
+Test Chat "Software engineer Wen Fan accidentally found himself transmigrated as the floating ball system in a mobile phone. He is as tall as the height of a thumb with a ram capacity of hundreds of billion gigabyte. He slept while hugging QQ Penguin, rode on the kangaroo of Meituan!"
+
+Liam "Hello World" list(item -f long), Playsong ("Intro Song" -v 1)
+
+setScene("Classroom" -s 5.5)
+
+Deka "Halo, \"Tunggu Sebentar\" aku akan segera kembali"
+
+Narator "dan berakhirlah tradisi 'Hello World' pada teks." Playsong(End, -p 0.5), list(player), saveGame(1 -g all -f simple)
+
+-----------------------------------
+
+
+Liam "Ini merubah segalanya.{a} kita berurusan dengan kekejaman pada tingkat yang baru sekarang."
+
+Deka "aku tahu.{c}sulit dipercaya bahwa ada seseorang yang dapat melakukan hal tersebut...{wa 1} seperti ini."
+
+Liam "kita harus segera menemukan pelakunya dan menghentikan aksi gilanya secepatnya.{c} tapi bagaimana kita akan memulai melacaknya ?"
+
+Deka "mungkin dapat memulainya dengan mendatangi para korban.{wa 0.5} di situ kita mungkin dapat menemukan petunjuk yang berhubungan."
+
+Liam "Hmm...{c} itu merupakan langkah awal yang bagus,{wc 1} namun jangan lupa kita harus berhati - hati dalam menyelidiki kasus ini.{a} jika pelaku berhubungan dengan hal supernatural,{wa 1} kita tidak tahu kemampuan apa yang dimilikinya."
+
+Deka "aku akan mencoba menggali informasi lebih dalam di beberapa organisasi lokal terlebih dahulu, {a} semoga seseorang memiliki informasi yang kita butuhkan."
+
+Liam "baiklah. {a}kalau begitu akan mengumpulkan petunjuk sebanyak mungkin, {c}kita akan menangkapnya, tidak peduli berapa lama waktu yang dibutuhkan."
+

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e206fc57f453a42b932de9e94caabf, type: 3}
+  m_Name: Dewi Galuh
+  m_EditorClassIdentifier: 
+  characterAsset: {fileID: 0}
+  Tags: 
+  Description: Deal 2 Damage To Enemy Creature
+  Story: 'Dewi Galuh Merupakan salah satu tokoh dari dongeng cerita rakyat Keong
+    Mas, Dewi Galuh adalah kakak dari Keong Mas atau Candra Kirana.
+
+
+    Dalam Kisah
+    yang dicerita kan Dewi Galuh sangat iri akan kecantikan dan kebaikan hati Keong
+    Mas dan menjadi lebih parah setelah mendengar bahwa Raden Inu Kertapati akan
+    meminang Keong Mas yang akhir membuat Dewi Galuh meminta pertolongan nenek sihir
+    untuk mengutuk Candra Kirana dan akhirnya Candra Kirana dikutuk menjadi Keong
+    Mas'
+  storyType: 3
+  Rarity: 3
+  TypeOfCard: 1
+  CardImage: {fileID: 21300000, guid: 33fb14b2a525d0f4e92dbfc4c7130b3a, type: 3}
+  ManaCost: 2
+  TokenCard: 0
+  OverrideLimitOfThisCardInDeck: -1
+  MaxHealth: 0
+  Attack: 0
+  AttacksForOneTurn: 1
+  Taunt: 0
+  Charge: 0
+  CreatureScriptName: 
+  specialCreatureAmount: 0
+  SpellScriptName: DamageAllOpponentCreatures
+  specialSpellAmount: 2
+  Targets: 0
