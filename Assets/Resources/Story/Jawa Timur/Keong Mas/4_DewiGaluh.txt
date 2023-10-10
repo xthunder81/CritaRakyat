@@ -1,0 +1,77 @@
+Narator "Di Istana Kerajaan ......"
+
+??? "Sial, tidak menyangka bahwa penyihir itu kalah. Kirana pasti perjalanan menuju ke Istana Kerajaan"
+
+Pegawai Istana "Putri Dewi Galuh, kita dapat kabar bahwa Putri Candra Kirana sudah ditemukan dan mereka dalam perjalanan kemari"
+
+Dewi Galuh "Benarkak ?, terima kasih untuk informasi nya"
+
+Pegawai Istana "sama - sama putri"
+
+Narator "Pegawai Istana pun meninggalkan ruangan"
+
+Dewi Galuh "Sial, ini terlalu cepat aku harus melakukan sesuatu kalau tidak aku dalam bahaya"
+
+Narator "Dewi Galuh pun memulai menyusun strategi"
+
+Narator "sedangkan Randen Inu Kertapati beserta rombongannya dalam perjalanan sedang mengalami kesulitan"
+
+Narator "mereka terhadang oleh banyak hal seolah tidak ingin Putri Candra Kirana kembali ke kerajaan"
+
+Narator "namun mereka tetap melanjutkan perjalanannya"
+
+Deka "masih berapa lama lagi kita sampai ke istana kerajaan ? kita sudah melakukan perjalanan lama sekali"
+
+Candra Kirana "sabar Deka, sebentar lagi sampai kok 2 hari perjalanan"
+
+Deka "Hahh, baiklah"
+
+Narator "mereka pun melanjutkan perjalanan sambil berbincang"
+
+Narator "setelah 2 hari berlalu Randen Inu Kertapati beserta rombongannya pun samapai di Istana Kerajaan Daha"
+
+Narator "disana mereka disambut langsung Oleh Raja Kertamata sekaligus ayah dari Putri Candra Kirana dan Putri Dewi Galuh"
+
+Raja Kertamata "selamat datang Pangeran Raden Inu Kertapati beserta rombongannya"
+
+Raden Inu Kertapati "terima kasih sudah menyambut kami paduka raja"
+
+Raja Kertamata "justru saya yang berterima kasih pangeran karena sudah menemukan putriku dan membawanya kembali"
+
+Raden Inu Kertapati "sudah kewajiban saya sebagai calon suami nya, jadi Raja Kertamata tidak perlu"
+
+Dewi Galuh "Paduka Raja, apakah Kanda Kertapati sudah datang ?"
+
+Raja Kertamata "sudah putri, ini Pangeran lagi berbincang dengan saya"
+
+Raden Inu Kertapati "Kebetulan dinda Galuh ada disini jadi saya bisa menyampaikan langsung pada kalian bedua"
+
+Raden Inu Kertapati "Dinda Kirana tolong ceritakan semua kejadian yang kamu alami"
+
+Narator "Candra Kirana pun mulai menceritakan semuanya mulai dari Candra Kirana yang dikutuk menjadi keong, lalu dibuang di sungai, diselamatkan oleh Nenek"
+
+Narator", bertemu dengan Deka, lalu bertemu kembali dengan Raden Inu Kertapati"
+
+Raja Kertamata "aku sama sekali tidak menyangka bahwa ini perbuatanmu Dewi Galuh, Candra Kirana itu adikmu"
+
+Dewi Galuh "kenapa ? dari dulu selalu Candra Kirana, sedangkan aku apa yang di dapat cuma cemohan dan ejekan, selalu dibanding - bandingkan dengannya"
+
+Dewi Galuh "apa yang aku inginkan selalu dimiliki oleh Candra Kirana, termasuk Pangeran Raden Inu Kertapati"
+
+Candra Kirana "Kakak, aku tidak bermaksud seperti itu aku ..."
+
+Dewi Galuh "tidak usah banyak alasan kita selesaikan sekarang juga"
+
+Battle
+
+Raja Kertamata "Dewi Galuh hentikan kamu sudah kalah"
+
+Dewi Galuh "Aku masih belum kalah tunggu saja aku akan kembali"
+
+Narator "Dewi Galuh pun kabur dari Istana Kerajaan menuju ke arah hutan dan menghilang"
+
+Narator "Raja Kertamata pun meminta maaf kepada Raden Inu Kertapati dan Candra Kirana"
+
+Narator "setelah beberapa lama setelah Dewi Galuh menghilang Raden Inu Kertapati dan Putri Candra Kirana menikah"
+
+Narator "Deka pun mendapatkan Batu Energi, setelah itu gerbang antar dimensi pun muncul lalu Deka mengucapkan selamat tinggal"

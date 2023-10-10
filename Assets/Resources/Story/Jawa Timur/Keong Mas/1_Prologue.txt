@@ -1,0 +1,27 @@
+Narator "brak"
+
+Deka "Aduh, tidak bisa kah mengirimku dengan cara yang lebih halus"
+
+Deka "Jadi ini Dunia Cerita, sangat indah dan asri"
+
+Deka "baikklah sekarang saatnya mencari petunjuk tentang batu energi"
+
+Deka "hmmm, aku sudah berjalan agak lama kenapa masih belum menemukan pemukiman ?"
+
+Narator "Setelah berjalan sekian lama, akhirnya Deka melihat sebuah gubuk"
+
+Deka "permisi apakah ada orang ?"
+
+Narator as ??? "anda siapa ? sepertinya anda tidak berasal dari daerah ini"
+
+Deka "Perkenalkan nama saya Deka, saya seorang pengembara yang tersesat"
+
+Deka "saya sedang mencari tempat untuk istirahat dan informasi, apakah nenek bisa membantu saya ?"
+
+Nenek "saat ini sudah mulai malam nak, tidak aman berada di luar"
+
+Nenek "bagaimana kalau anda sementara menginap di sini terlebih dahulu, besok baru ke desa ?"
+
+Deka "Baik Nek, terima kasih sudah memberi tempat untuk istirahat"
+
+Nenek "sama - sama nak sudah sewajarnya untuk saling membantu"

@@ -5,11 +5,14 @@ public class GuideSystem : MonoBehaviour
 
 
     public GameObject[] guides;
+    public Menu menu;
 
     int _selectedObjectIndex = -1;
 
     public void SelectObject(int selectedIndex)
     {
+        menu = GetComponent<Menu>();
+
         // Disable the previous selected object, if any.
         if (_selectedObjectIndex >= 0)
             guides[_selectedObjectIndex].SetActive(false);
@@ -23,6 +26,17 @@ public class GuideSystem : MonoBehaviour
             guides[_selectedObjectIndex].SetActive(false);
             TempGuide = 1;
             SaveGuidesPlayerPref();
+        }
+
+        else if (_selectedObjectIndex == 2)
+        {
+            //StartCoroutine(menu.TombolKartu());
+            //menu.SubKartuMenu.SetActive(true);
+        }
+        
+        else if (_selectedObjectIndex > 3)
+        {
+            menu.TombolHome();
         }
     }
 
@@ -41,6 +55,19 @@ public class GuideSystem : MonoBehaviour
         }
         // SelectObject(0);
     }
+
+    // void Update()
+    // {
+    //     if (_selectedObjectIndex == 2)
+    //     {
+    //         menu.TombolKartu();
+    //     }
+        
+    //     else if (_selectedObjectIndex > 3)
+    //     {
+    //         menu.TombolHome();
+    //     }
+    // }
 
     private int tempGuide;
     public int TempGuide

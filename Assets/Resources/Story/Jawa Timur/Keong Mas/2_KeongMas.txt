@@ -1,0 +1,82 @@
+Nenek "Nak sudah pagi, ayo bangun"
+
+Deka "haah aku kangen kasur yang ada dirumah, sekarang bukan saatnya untuk mengeluh"
+
+Narator "Deka, pun beranjak dari tempat tidur menuju ruang makan"
+
+Nenek "akhirnya bangun juga, anak muda jaman sekarang"
+
+Deka "Maafkan saya nek, mungkin karena kecapekan jadi bangun agak kesiangan"
+
+Nenek "segera makan, nanti saya antarkan ke desa untuk mencari informasi yang anda butuhkan"
+
+Narator "Sejenak akhirnya makanan pun tiba dimeja makan"
+
+Deka "cantik sekali, nek ini cucu nenek ?"
+
+Narator as ??? "Silakan makanannya, Perkenalkan nama saya rana \n saya dengar dari nenek anda seorang pengembara ?"
+
+Deka "Benar namun pengembara yang tersesat, nama saya Deka senang berkenalan dengan gadis cantik seperti anda"
+
+Nenek "ayo segera dimakan, Keong Mas nanti setelah selesai makan tolong temani Deka ke Balai Desa"
+
+Deka "hmm, Keong Mas bukannya salah satu cerita yang biasanya di baca sama kakak, mantab dapat jackpot"
+
+Deka "Keong Mas ? bukannya nama kamu Rana"
+
+Keong Mas "itu nama panggilan saya, saya biasanya di panggil Keong Mas"
+
+Deka "padahal punya nama yang bagus namun di panggil Keong Mas"
+
+Keong Mas "hahaha, panjang cerita nya, kita sudah sampai Balai Desa"
+
+Keong Mas "nanti saya tunggu di warung makan ya mas, sekalian saya mau jual ikan di pasar"
+
+Deka "baik sampai ketemu nanti"
+
+Deka "Nah Sekarang saatnya mencari informasi"
+
+Narator "Deka pun langsung menuju balai desa dan mencari informasi tentang batu energi"
+
+Narator "setelah sekian lama mencari informasi masih belum menemukan petunjuk, akhirnya Deka meunuju ke Warung Makan"
+
+Keong Mas "bagaimana proses mencari informasi nya ?, kok kelihatan loyo gitu"
+
+Deka "informasi yang aku cari tidak tidak ada, bingung harus cari kemana"
+
+Keong Mas "memangnya informasi apa yang anda cari ?"
+
+Deka "aku membutuhkan informasi tentang batu energi"
+
+Narator "Deka menunjukkan batu energi miliknya ke Keong Mas sambil makan"
+
+Narator "Keong Mas pun agak kaget melihat batu tersebut namun segera bersikap normal"
+
+Keong Mas "cantik sekali batu nya, mohon maaf saya kurang tau"
+
+Deka "setelah makan mari kita kembali sekalian mau minta saran ke nenek"
+
+Narator "Setelah selesai makan Deka dan Keong Mas pun kembali ke Rumah Nenek"
+
+Deka "Permisi, selamat sore"
+
+Nenek "Selamat Sore, bagaimana nak Deka sudah mendapat informasi yang di butuhkan ?"
+
+Deka "masih belum nek, ini saya mau berdiskusi dan minta saran ke nenek tentang masalah ini"
+
+Nenek "baiklah kita diskusi di meja makan"
+
+Narator "Deka dan Nenek pun berdiskusi samapai malam"
+
+Nenek "mungkin kamu harus ke kerajaan nak Deka, kalau mendengar cerita dari anda barusan"
+
+Deka "apakah jauh dari sini nek ?"
+
+Nenek "lumayan jauh nak, 3 hari perjalanan dari sini kalau mau berangkat mending besok pagi"
+
+Narator "setelah selesai berdiskusi Deka memutuskan tidur untuk persiapan berangkat besok pagi"
+
+Narator "setelah pagi menjelang Deka pun pamit ke Nenek dan Keong Mas lalu berangkat ke kekerajaan"
+
+Narator "dalam perjalanan Deka pun dicegat dan diserang"
+
