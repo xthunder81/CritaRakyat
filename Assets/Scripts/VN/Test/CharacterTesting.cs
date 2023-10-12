@@ -6,7 +6,7 @@ public class CharacterTesting : MonoBehaviour {
 
     void Start ()
     {
-        deka = CharacterManager.instance.GetCharacter("deka", enableCreatedCharacterOnStart:false);
+        deka = CharacterManager.instance.GetCharacter("Deka", enableCreatedCharacterOnStart:false);
     }
 
     public string[] speech;

@@ -32,11 +32,22 @@ public class Character
         if (!enabled)
             enabled = true;
 
-        if (!add)
-            dialogue.Say(speech, dlCharacterName);
+        dialogue.Say(speech, dlCharacterName, add);
+    }
 
-        else
-            dialogue.AddSay(speech, dlCharacterName);
+    public void FlipCharacter()
+    {
+        root.localScale = new Vector3(-1,1,1);
+    }
+
+    public void FlipCharacterLeft()
+    {
+        root.localScale = new Vector3(-1,1,1);
+    }
+
+    public void FlipCharacterRight()
+    {
+        root.localScale = new Vector3(1,1,1);
     }
 
     Vector2 n2Move;
@@ -55,6 +66,140 @@ public class Character
         // mulai bergerak
         moving = CharacterManager.instance.StartCoroutine(DLMove(target, speed, smooth));
     }
+
+    //Begin Transitioning Images\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	public Sprite GetSprite(int index = 0)
+	{
+		Sprite[] sprites = Resources.LoadAll<Sprite> ("Images/Characters/" + dlCharacterName);
+		return sprites[index];
+	}
+
+	public Sprite GetSprite(string spriteName = "")
+	{
+		Sprite[] sprites = Resources.LoadAll<Sprite> ("Images/Characters/" + dlCharacterName);
+		for(int i = 0; i < sprites.Length; i++)
+		{
+			if (sprites[i].name == spriteName)
+				return sprites[i];
+		}
+		return sprites.Length > 0 ? sprites[0] : null;
+	}
+
+	public void SetBody(int index)
+	{
+		renderers.bodyRenderer.sprite = GetSprite (index);
+	}
+	public void SetBody(Sprite sprite)
+	{
+		renderers.bodyRenderer.sprite = sprite;
+	}
+	public void SetBody(string spriteName)
+	{
+		renderers.bodyRenderer.sprite = GetSprite (spriteName);
+	}
+
+	public void SetExpression(int index)
+	{
+		renderers.expressionRenderer.sprite = GetSprite (index);
+	}
+	public void SetExpression(Sprite sprite)
+	{
+		renderers.expressionRenderer.sprite = sprite;
+	}
+	public void SetExpression(string spriteName)
+	{
+		renderers.expressionRenderer.sprite = GetSprite (spriteName);
+	}
+
+	//Transition Body
+	bool isTransitioningBody {get{ return transitioningBody != null;}}
+	Coroutine transitioningBody = null;
+
+	public void TransitionBody(Sprite sprite, float speed, bool smooth)
+	{
+		StopTransitioningBody ();
+		transitioningBody = CharacterManager.instance.StartCoroutine (TransitioningBody (sprite, speed, smooth));
+	}
+
+	void StopTransitioningBody()
+	{
+		if (isTransitioningBody)
+			CharacterManager.instance.StopCoroutine (transitioningBody);
+		transitioningBody = null;
+	}
+
+	public IEnumerator TransitioningBody(Sprite sprite, float speed, bool smooth)
+	{
+		for (int i = 0; i < renderers.allBodyRenderers.Count; i++) 
+		{
+			Image image = renderers.allBodyRenderers [i];
+			if (image.sprite == sprite) 
+			{
+				renderers.bodyRenderer = image;
+				break;
+			}
+		}
+
+		if (renderers.bodyRenderer.sprite != sprite) 
+		{
+			Image image = GameObject.Instantiate (renderers.bodyRenderer.gameObject, renderers.bodyRenderer.transform.parent).GetComponent<Image> ();
+			renderers.allBodyRenderers.Add (image);
+			renderers.bodyRenderer = image;
+			image.color = DLGlobalFunction.SetAlpha (image.color, 0f);
+			image.sprite = sprite;
+		}
+
+		while (DLGlobalFunction.TransitionImages (ref renderers.bodyRenderer, ref renderers.allBodyRenderers, speed, smooth, true))
+			yield return new WaitForEndOfFrame ();
+
+		StopTransitioningBody ();
+	}
+
+	//Transition Expression
+	bool isTransitioningExpression {get{ return transitioningExpression != null;}}
+	Coroutine transitioningExpression = null;
+
+	public void TransitionExpression(Sprite sprite, float speed, bool smooth)
+	{
+		StopTransitioningExpression ();
+		transitioningExpression = CharacterManager.instance.StartCoroutine (TransitioningExpression (sprite, speed, smooth));
+	}
+
+	void StopTransitioningExpression()
+	{
+		if (isTransitioningExpression)
+			CharacterManager.instance.StopCoroutine (transitioningExpression);
+		transitioningExpression = null;
+	}
+
+	public IEnumerator TransitioningExpression(Sprite sprite, float speed, bool smooth)
+	{
+		for (int i = 0; i < renderers.allExpressionRenderers.Count; i++) 
+		{
+			Image image = renderers.allExpressionRenderers [i];
+			if (image.sprite == sprite) 
+			{
+				renderers.expressionRenderer = image;
+				break;
+			}
+		}
+
+		if (renderers.expressionRenderer.sprite != sprite) 
+		{
+			Image image = GameObject.Instantiate (renderers.expressionRenderer.gameObject, renderers.expressionRenderer.transform.parent).GetComponent<Image> ();
+			renderers.allExpressionRenderers.Add (image);
+			renderers.expressionRenderer = image;
+			image.color = DLGlobalFunction.SetAlpha (image.color, 0f);
+			image.sprite = sprite;
+		}
+
+		while (DLGlobalFunction.TransitionImages (ref renderers.expressionRenderer, ref renderers.allExpressionRenderers, speed, smooth, true))
+			yield return new WaitForEndOfFrame ();
+
+		StopTransitioningExpression ();
+	}
+		
+	//End Transition Images\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
     /// <summary>
     /// fungsi dari menggerakkan karakter
@@ -117,6 +262,27 @@ public class Character
         root.anchorMax = root.anchorMin + padding;
     }
 
+    public void FadeOut(float speed = 3, bool smooth = false)
+	{
+		Sprite alphaSprite = Resources.Load<Sprite>("VisualNovel/Images/AlphaOnly");
+
+		lastBodySprite = renderers.bodyRenderer.sprite;
+		lastFacialSprite = renderers.expressionRenderer.sprite;
+
+		TransitionBody(alphaSprite, speed, smooth);
+		TransitionExpression(alphaSprite, speed, smooth);
+	}
+
+	Sprite lastBodySprite, lastFacialSprite = null;
+	public void FadeIn(float speed = 3, bool smooth = false)
+	{
+		if (lastBodySprite != null)
+		{
+			TransitionBody(lastBodySprite, speed, smooth);
+			TransitionExpression(lastFacialSprite, speed, smooth);
+		}
+	}
+
     /// <summary>
     /// membuat karakter
     /// </summary>
@@ -126,7 +292,7 @@ public class Character
         CharacterManager cm = CharacterManager.instance;
 
         // lokasi prefabs
-        GameObject prefabs = Resources.Load("Story/Character/Character[" + _name + "]") as GameObject;
+        GameObject prefabs = Resources.Load("VisualNovel/Character/Character[" + _name + "]") as GameObject;
 
         // memanggil prefabs yang dibutuhkan
         GameObject ob = GameObject.Instantiate(prefabs, cm.characterPanel);

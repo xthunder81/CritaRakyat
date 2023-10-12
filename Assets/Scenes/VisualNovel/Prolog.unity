@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 119742161}
   - component: {fileID: 119742163}
   - component: {fileID: 119742164}
+  - component: {fileID: 119742165}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -236,10 +237,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 450732790}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &119742163
 MonoBehaviour:
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
     speechPanel: {fileID: 1068655247}
+    speakerNamePanel: {fileID: 0}
     speakerNameText: {fileID: 1959506275}
     speechText: {fileID: 1879056775}
   isWaitingForUserInput: 0
@@ -273,6 +274,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterPanel: {fileID: 1322217718}
   characters: []
+--- !u!114 &119742165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119742160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2878b39f64e91994ba36dde6ea0439e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &182934285
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6852606, y: 0.27074072}
   m_AnchorMax: {x: 1, y: 0.37101218}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.00012207031}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189007903
@@ -575,9 +588,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 345871585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be879661e18cbb44d83c84ca50ee99a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 345871587}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 119742165}
+        m_TargetAssemblyTypeName: NovelController, Assembly-CSharp
+        m_MethodName: NextText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &358526228
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,10 +806,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -797,7 +854,7 @@ RectTransform:
   - {fileID: 1730580725}
   - {fileID: 977808603}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -860,8 +917,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 119742161}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &450732791
 MonoBehaviour:
@@ -1134,6 +1191,7 @@ GameObject:
   - component: {fileID: 945986195}
   - component: {fileID: 945986196}
   - component: {fileID: 945986197}
+  - component: {fileID: 945986198}
   m_Layer: 0
   m_Name: Testing
   m_TagString: Untagged
@@ -1170,7 +1228,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &945986195
 MonoBehaviour:
@@ -1194,13 +1252,13 @@ MonoBehaviour:
       allBodyRenderers: []
       allExpressionRenderers: []
   speech:
-  - halo!
+  - hai semua
   - perkenalkan nama saya deka
   - saya berasal dari surabaya
-  - saya berasal dari surabaya
+  - yang penting sedang dicoba <color=green><b><i>Sesuatu</i></b></color>
   moveTarget: {x: 0, y: 0}
-  moveSpeed: 5
-  smooth: 0
+  moveSpeed: 1
+  smooth: 1
 --- !u!114 &945986196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,7 +1279,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945986192}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d19af33d0f6e7fc4dbc6bed329b8a5b6, type: 3}
   m_Name: 
@@ -1236,6 +1294,25 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d61c85377d0f2b042aa8df275c055e31, type: 3}
   musics:
   - {fileID: 8300000, guid: 3f52e17d2c2087b41b78daf3743b80b3, type: 3}
+--- !u!114 &945986198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945986192}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d6ecd7a9e29fa4fae13745358c0e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1879056775}
+  say: ini adalah sebuat percobaan, <color=green><b><i>Sesuatu</i></b></color> yang
+    penting sedang dicoba
+  charactersPerFrame: 1
+  speed: 1
+  encapsulation: 1
+  useTmpro: 1
 --- !u!1 &977808602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1625,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532541841
 GameObject:
@@ -1821,6 +1898,7 @@ GameObject:
   - component: {fileID: 1879056774}
   - component: {fileID: 1879056776}
   - component: {fileID: 1879056775}
+  - component: {fileID: 1879056777}
   m_Layer: 5
   m_Name: SpeechText
   m_TagString: Untagged
@@ -1945,6 +2023,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879056773}
   m_CullTransparentMesh: 1
+--- !u!114 &1879056777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879056773}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0c395572ef3224fab5971fb4258b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continualUpdate: 1
+  fontSizeAtDefaultResolution: 40
 --- !u!1 &1959506273
 GameObject:
   m_ObjectHideFlags: 0

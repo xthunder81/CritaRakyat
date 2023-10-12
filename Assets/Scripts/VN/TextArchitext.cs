@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TextArchitext
@@ -8,15 +9,17 @@ public class TextArchitext
     /// <summary>
     /// current text digunakan sebagai media menggunakan fungsi Text Architech
     /// </summary>
-    public string currentText { get { return _currentText; } }
-    private string _currentText = "";
+
+	private static Dictionary<TextMeshProUGUI, TextArchitext> activeArchitects = new Dictionary<TextMeshProUGUI, TextArchitext>();
+
+	TextMeshProUGUI tmpro;
 
     private string preText;
     private string targetText;
 
     private int charactersPerFrame = 1;
     [Range(1f, 60f)]
-    private float speed = 1f;
+    private float speed = 0.5f;
     private bool useEncapsulation = true;
 
     public bool skip = false;
@@ -24,81 +27,89 @@ public class TextArchitext
     public bool isTextConstructing { get { return buildProcess != null; } }
     Coroutine buildProcess = null;
 
-    public TextArchitext(string targetText, string preText = "", int charactersPerFrame = 1, float speed = 1f, bool useEncapsulation = true)
+    public TextArchitext(TextMeshProUGUI tmpro, string targetText, string preText = "", int charactersPerFrame = 1, float speed = 2f)
     {
-        this.targetText = targetText;
+        this.tmpro = tmpro;
+		this.targetText = targetText;
         this.preText = preText;
         this.charactersPerFrame = charactersPerFrame;
         this.speed = speed;
-        this.useEncapsulation = useEncapsulation;
 
-        buildProcess = DialogueSystem.instance.StartCoroutine(TextConstruction());
+        Initiate();
     }
+
+	public void Stop()
+	{
+		if (isTextConstructing)
+		{
+			DialogueSystem.instance.StopCoroutine(buildProcess);
+		}
+		buildProcess = null;
+	}
 
     IEnumerator TextConstruction()
     {
         int runsThisFrame = 0;
-		string[] speechAndTags = useEncapsulation ? TextTagsManager.SplitByTags(targetText) : new string[1]{targetText};
 
-		//is this is additive, make sure we include the additive text.
-		_currentText = preText;
-		//make a storage for the building text so we don't change what is already made. so we can sandwich it between tags.
-		string curText = "";
+		tmpro.text = "";
+		tmpro.text += preText;
 
-		//build the text by moving through each part
-		for (int a = 0; a < speechAndTags.Length; a++)
+		tmpro.ForceMeshUpdate();
+		TMP_TextInfo inf = tmpro.textInfo;
+		int vis = inf.characterCount;
+
+		tmpro.text += targetText;
+
+		tmpro.ForceMeshUpdate();
+		inf = tmpro.textInfo;
+		int max = inf.characterCount;
+
+		tmpro.maxVisibleCharacters = vis;
+
+		while(vis < max)
 		{
-			string section = speechAndTags[a];
-			//tags will always be odd indexed.
-			bool isATag = (a & 1) != 0;
-
-			if (isATag && useEncapsulation)
+			//allow skipping by increasing the characters per frame and the speed of occurance.
+			if (skip)
 			{
-				//store the current text into something that can be referenced as a restart point as tagged sections of text are added and removed.
-				curText = _currentText;
-				ENCAPSULATED_TEXT encapsulation = new ENCAPSULATED_TEXT(string.Format("<{0}>", section), speechAndTags, a);
-				while(!encapsulation.isDone)
-				{
-					bool stepped = encapsulation.Step();
-
-					_currentText = curText + encapsulation.displayText;
-
-					//only yield if a step was taken in building the string
-					if (stepped)
-					{
-						runsThisFrame++;
-						int maxRunsPerFrame = skip ? 5 : charactersPerFrame;
-						if (runsThisFrame == maxRunsPerFrame)
-						{
-							runsThisFrame = 0;
-							yield return new WaitForSeconds(skip ? 0.01f : 0.01f * speed);
-						}
-					}
-				}
-				//increment by one to bypass the text that was used in the encapsulation.
-				a = encapsulation.speechAndTagsArrayProgress + 1;
+				speed = 1;
+				charactersPerFrame = charactersPerFrame < 5 ? 5 : charactersPerFrame + 3;
 			}
-			//not a tag or not using encap. build like regular text.
-			else
+
+			//reveal a certain number of characters per frame.
+			while(runsThisFrame < charactersPerFrame)
 			{
-				for (int i = 0; i < section.Length; i++)
-				{
-					_currentText += section[i];
-
-					runsThisFrame++;
-					int maxRunsPerFrame = skip ? 5 : charactersPerFrame;
-					if (runsThisFrame == maxRunsPerFrame)
-					{
-						runsThisFrame = 0;
-						yield return new WaitForSeconds(skip ? 0.01f : 0.01f * speed);
-					}
-				}
+				vis++;
+				tmpro.maxVisibleCharacters = vis;
+				runsThisFrame++;
 			}
+
+			//wait for the next available revelation time.
+			runsThisFrame = 0;
+			yield return new WaitForSeconds(0.01f * speed);
 		}
 
-		//end the build process, construction is done.
-		buildProcess = null;
+		//terminate the architect and remove it from the active log of architects.
+		Terminate();		
     }
+
+	void Initiate()
+	{
+		//check if an architect for this text object is already running. if it is, terminate it. Do not allow more than one architect to affect the same text object at once.
+		TextArchitext existingArchitect = null;
+		if (activeArchitects.TryGetValue(tmpro, out existingArchitect))
+			existingArchitect.Terminate();
+
+		buildProcess = DialogueSystem.instance.StartCoroutine(TextConstruction());
+		activeArchitects.Add(tmpro, this);
+	}
+
+	public void Terminate()
+	{
+		activeArchitects.Remove(tmpro);
+		if (isTextConstructing)
+			DialogueSystem.instance.StopCoroutine(buildProcess);
+		buildProcess = null;
+	} 
 
     private class ENCAPSULATED_TEXT
 	{
@@ -112,7 +123,7 @@ public class TextArchitext
 		public string displayText {get{return _displayText;}}
 		private string _displayText = "";
 
-		//contains elements that the encapsulator will attempt to advance to when searching for sub encapsulators.
+		//berisikan elemen-element yang akan digunakan dalam enkapsulasi.
 		private string[] allSpeechAndTagsArray;
 		public int speechAndTagsArrayProgress {get{return arrayProgress;}}
 		private int arrayProgress = 0;
@@ -137,7 +148,7 @@ public class TextArchitext
 
 				targetText = nextPart;
 					
-				//increment progress so the next attempted part is updated.
+				
 				this.arrayProgress++;
 			}
 		}

@@ -63,7 +63,12 @@ public class BackgroundFunction : MonoBehaviour
         }
 
         void StopTransition()
-        { }
+        {
+            if(isTextureTransition)
+				BackgroundFunction.instance.StopCoroutine(textureTransition);
+
+			textureTransition = null;
+        }
 
         /// <summary>
         /// proses transisi memunculkan gambar

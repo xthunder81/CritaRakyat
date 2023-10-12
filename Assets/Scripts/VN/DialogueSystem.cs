@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using JetBrains.Annotations;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -18,23 +19,14 @@ public class DialogueSystem : MonoBehaviour
     /// <summary>
     /// mengatakan sesuatu dan ditampilkan pada kolom dialog
     /// </summary>
-    public void Say(string speech, string speakerName = "")
+    public void Say(string speech, string speakerName = "", bool additive = false)
     {
         StopSpeaking();
 
-        speaking = StartCoroutine(Speaking(speech, false, speakerName));
-    }
+        if (additive)
+            speechText.text = targerSpeech;
 
-    /// <summary>
-    /// mengatakan sesuatu untuk ditambahkan pada dialog yang sudah ada di kolom dialog
-    /// </summary>
-    public void AddSay(string speech, string speakerName = "")
-    {
-        StopSpeaking();
-
-        speechText.text = targerSpeech;
-
-        speaking = StartCoroutine(Speaking(speech, true, speakerName));
+        speaking = StartCoroutine(Speaking(speech, additive, speakerName));
     }
 
     public void StopSpeaking()
@@ -43,6 +35,11 @@ public class DialogueSystem : MonoBehaviour
         {
             StopCoroutine(speaking);
         }
+
+        if (textArchitext != null && textArchitext.isTextConstructing)
+		{
+			textArchitext.Stop();
+		}
 
         speaking = null;
     }
@@ -54,6 +51,8 @@ public class DialogueSystem : MonoBehaviour
     public string targerSpeech = "";
     Coroutine speaking = null;
 
+    TextArchitext textArchitext = null;
+
     /// <summary>
     /// Fungsi Dialog
     /// </summary>
@@ -61,23 +60,28 @@ public class DialogueSystem : MonoBehaviour
     {
         speechPanel.SetActive(true);
 
-        targerSpeech = speech;
+        string additiveSpeech = additive ? speechText.text : "";
+        targerSpeech = additiveSpeech + speech;;
 
-        if (!additive)
-            speechText.text = "";
-
-        else
-            targerSpeech = speechText.text + targerSpeech;
+        TextArchitext textArchitect = new TextArchitext(speech, additiveSpeech);
 
         speakerNameText.text = CheckSpeaker(speaker);
-        
+        //speakerNamePanel.SetActive(speakerNameText.text != "");
+
         isWaitingForUserInput = false;
 
-        while (speechText.text != targerSpeech)
+        while (textArchitect.isTextConstructing)
         {
-            speechText.text += targerSpeech[speechText.text.Length];
+            if (Input.GetKey(KeyCode.Space))
+				textArchitect.skip = true;
+            
+            speechText.text = textArchitect.currentText;
+
             yield return new WaitForEndOfFrame();
         }
+
+        // untuk menghalau teks dari selesai memperbarui
+        speechText.text = textArchitect.currentText;
 
         // Text Selesai
         isWaitingForUserInput = true;
@@ -94,7 +98,7 @@ public class DialogueSystem : MonoBehaviour
         string retVal = speakerNameText.text;
 
         if (s != speakerNameText.text && s != "")
-            retVal = (s.ToLower().Contains("narrator")) ? "" : s;
+            retVal = (s.ToLower().Contains("narator")) ? "" : s;
 
         return retVal;
     }
@@ -103,10 +107,10 @@ public class DialogueSystem : MonoBehaviour
     /// Menutup Speech Panel dan menghentikan semua dialogue percakapan
     /// </summary>
     public void CloseSay()
-	{
-		StopSpeaking ();
-		speechPanel.SetActive (false);
-	}
+    {
+        StopSpeaking();
+        speechPanel.SetActive(false);
+    }
 
     [System.Serializable]
     public class ELEMENTS
@@ -116,6 +120,7 @@ public class DialogueSystem : MonoBehaviour
         /// </summary>
 
         public GameObject speechPanel;
+        public GameObject speakerNamePanel;
         public TextMeshProUGUI speakerNameText;
         public TextMeshProUGUI speechText;
     }
@@ -123,5 +128,6 @@ public class DialogueSystem : MonoBehaviour
     public GameObject speechPanel { get { return elements.speechPanel; } }
     public TextMeshProUGUI speakerNameText { get { return elements.speakerNameText; } }
     public TextMeshProUGUI speechText { get { return elements.speechText; } }
+    public GameObject speakerNamePanel {get{return elements.speakerNamePanel;}}
 
 }
