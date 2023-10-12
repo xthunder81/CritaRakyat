@@ -61,7 +61,7 @@ public class DialogueSystem : MonoBehaviour
         speechPanel.SetActive(true);
 
         string additiveSpeech = additive ? speechText.text : "";
-        targerSpeech = additiveSpeech + speech;;
+        targerSpeech = additiveSpeech + speech;
 
         TextArchitext textArchitect = new TextArchitext(speech, additiveSpeech);
 
