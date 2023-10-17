@@ -63,7 +63,7 @@ public class DialogueSystem : MonoBehaviour
         string additiveSpeech = additive ? speechText.text : "";
         targerSpeech = additiveSpeech + speech;
 
-        TextArchitext textArchitect = new TextArchitext(speech, additiveSpeech);
+        TextArchitext textArchitect = new TextArchitext(speechText,speech, additiveSpeech);
 
         speakerNameText.text = CheckSpeaker(speaker);
         //speakerNamePanel.SetActive(speakerNameText.text != "");
@@ -74,14 +74,9 @@ public class DialogueSystem : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
 				textArchitect.skip = true;
-            
-            speechText.text = textArchitect.currentText;
 
             yield return new WaitForEndOfFrame();
         }
-
-        // untuk menghalau teks dari selesai memperbarui
-        speechText.text = textArchitect.currentText;
 
         // Text Selesai
         isWaitingForUserInput = true;

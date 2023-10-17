@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     [Header("Main Button Reference")]
     public Button HomeMenu;
     public Button PertandinganMenu;
+    public Button DekKartuMenu;
     public Button KartuMenu;
     public Button TokoMenu;
     public Button KeluarMenu;
@@ -33,15 +34,21 @@ public class Menu : MonoBehaviour
     {
 
         SubPertandinganMenu.SetActive(true);
-        SubKartuMenu.SetActive(false);
         audioButton.Play();
     }
 
 
-    public void TombolKartu()
+    public void MenuPengaturanDeck()
     {
-        SubPertandinganMenu.SetActive(false);
-        SubKartuMenu.SetActive(true);
+        HalamanUtama.SetActive(false);
+        DeckBuildingScreen.Instance.ShowScreenForCollectionBrowsing();
+        audioButton.Play();
+    }
+
+    public void MenuGaleriKartu()
+    {
+        HalamanUtama.SetActive(false);
+        CardCollectionsScreen.Instance.ShowScreenForCollectionBrowsing();
         audioButton.Play();
     }
 

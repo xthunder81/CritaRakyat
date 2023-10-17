@@ -11,23 +11,18 @@ public class architechTesting : MonoBehaviour {
     public string say;
     public int charactersPerFrame =1;
     public float speed = 0.5f;
-    public bool encapsulation = true;
-
-    public bool useTmpro = true;
 
     void Start ()
     {
-        architect = new TextArchitext(say);
+        architect = new TextArchitext(text,say, "", charactersPerFrame, speed);
     }
 
     void Update ()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            architect = new TextArchitext(say, "", charactersPerFrame, speed, encapsulation, useTmpro);
+            architect = new TextArchitext(text,say, "", charactersPerFrame, speed);
         }
-
-        text.text = architect.currentText;
     }
 
 }

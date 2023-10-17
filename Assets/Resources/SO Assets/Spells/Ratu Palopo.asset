@@ -15,11 +15,20 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
-  Story: 
+  Story: 'Ratu Palopo merupakan salah satu tokoh dari cerita rakyat Asal Muasal Kerajaan
+    Mori yang berasal dari Sulawesi Tengah. Ratu Palopo merupakan pemimpin dari Kerajaan
+    Luwuk di jaman tersebut.
+
+
+    Ratu Palopo di kala itu terkenal bijaksana dan
+    adil, sehingga semua kepala suku dari tanah mori mengirim para utusan mereka
+    untuk meminta saran kepada Ratu Palopo demi menghentikan pertikaian yang terjadi
+    di Tanah Mori. lalu Ratu Palopo mengirim ketiga saudara nya untuk menjadi calon
+    pemimpin dari semua suku yang ada di tanah mori.'
   storyType: 2
   Rarity: 2
   TypeOfCard: 1
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: bf57761f08aef9646b486a20432bd269, type: 3}
   ManaCost: 2
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1

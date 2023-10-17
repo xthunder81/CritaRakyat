@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DeckBuildingScreen : MonoBehaviour {
+public class DeckBuildingScreen : MonoBehaviour
+{
 
     public GameObject ScreenContent;
+    public GameObject DeckSection;
+    public GameObject GridCardsList;
     public GameObject ReadyDecksList;
     public GameObject CardsInDeckList;
+    public GameObject BackToMenu;
     public DeckBuilder BuilderScript;
     public ListOfDecksInCollection ListOfReadyMadeDecksScript;
     public CollectionBrowser CollectionBrowserScript;
@@ -17,20 +21,23 @@ public class DeckBuildingScreen : MonoBehaviour {
     public static DeckBuildingScreen Instance;
 
     // Use this for initialization
-    void Awake () 
+    void Awake()
     {
-        Instance = this;    
+        Instance = this;
         HideScreen();
-    }   
+    }
 
     public void ShowScreenForCollectionBrowsing()
     {
         ScreenContent.SetActive(true);
         ReadyDecksList.SetActive(true);
+        DeckSection.SetActive(false);
         CardsInDeckList.SetActive(false);
         BuilderScript.InDeckBuildingMode = false;
+        GridCardsList.SetActive(false);
+        BackToMenu.SetActive(true);
         // TabsScript.gameObject.SetActive(true);
-        
+
         ListOfReadyMadeDecksScript.UpdateList();
 
         CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(true);
@@ -38,13 +45,16 @@ public class DeckBuildingScreen : MonoBehaviour {
         Canvas.ForceUpdateCanvases();
 
         CollectionBrowserScript.ShowCollectionForBrowsing();
-    } 
+    }
 
     public void ShowScreenForDeckBuilding()
     {
         ScreenContent.SetActive(true);
         ReadyDecksList.SetActive(false);
         CardsInDeckList.SetActive(true);
+        DeckSection.SetActive(true);
+        GridCardsList.SetActive(true);
+        BackToMenu.SetActive(false);
         // TabsScript.gameObject.SetActive(true);
 
         CollectionBrowserScript.AllCharactersTabs.gameObject.SetActive(false);

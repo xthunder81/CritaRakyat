@@ -9,6 +9,7 @@ public class DeckBuilder : MonoBehaviour
     public GameObject CardNamePrefab;
     public Transform Content;
     public TMP_InputField DeckName;
+    public TextMeshProUGUI totalCardAmount;
 
     public int SameCardLimit = 2;
     public int AmountOfCardsInDeck = 10;
@@ -70,6 +71,8 @@ public class DeckBuilder : MonoBehaviour
                 ribbons.Add(asset, ribbon);
             }
         }
+
+        totalCardAmount.text = string.Format("{0}/{1}", deckList.Count.ToString(), AmountOfCardsInDeck.ToString());
     }
 
     void CheckDeckCompleteFrame()
@@ -103,6 +106,7 @@ public class DeckBuilder : MonoBehaviour
         deckList.Remove(asset);
 
         CheckDeckCompleteFrame();
+        totalCardAmount.text = string.Format("{0}/{1}", deckList.Count.ToString(), AmountOfCardsInDeck.ToString());
 
         // update quantities of all cards that we currently show in the collection
         // this should be after deckList.Remove(asset); line to show correct quantities

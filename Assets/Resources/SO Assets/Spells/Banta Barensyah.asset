@@ -10,12 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41e206fc57f453a42b932de9e94caabf, type: 3}
-  m_Name: Bante Barensyah
+  m_Name: Banta Barensyah
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
+  Description: mengurangi 1 poin semua kartu lawan yang ada di arena
+  Story: 'Banta Barensyah merupakan tokoh utama dari cerita rakyat dari Banta Barensyah,
+    Banta Barensyah merupakan kisah cerita rakyat yang berasal dari Aceh.
+
+
+    Banta
+    Barensyah merupakan seorang anak yang tinggal bersama ibunya di sebuah gubuk,
+    setiap hari pekerjaan mereka menumbuk padi yang berasal dari pamannya. Sedangkan
+    Paman nya merupakan orang yang pelit dan sangat perhitungan, sehingga setiap
+    selesai menumbbuk padi Banta Barensyah beserta ibunya hanya dibayar segenggam
+    nasi oleh pamannya.'
   storyType: 3
   Rarity: 0
   TypeOfCard: 1

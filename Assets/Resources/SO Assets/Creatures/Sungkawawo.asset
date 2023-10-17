@@ -15,11 +15,19 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
-  Story: 
+  Story: 'Sungkawawo meruapakan salah satu tokoh dari cerita rakyat Asal Muasal Kerajaan
+    Mori, Asal Muasal Kerajaan Mori merupakan cerita rakyat yang berasal dari Sulawesi
+    Tengah.
+
+
+    suatu alkisah para utusan dari Tanah Mori meminta saran kepada
+    Ratu Palopo mengenai Pemimpin yang akan memimpin Tanah Mori, lalu oleh Ratu Palopo
+    dikirimlah tiga saudaranya salah satunya Sungkawawo yang mana menjadi Raja di
+    Tanah Mori.'
   storyType: 2
   Rarity: 1
   TypeOfCard: 0
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: de2aa8a5859009c4aa26814aedc35a59, type: 3}
   ManaCost: 2
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1

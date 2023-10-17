@@ -15,16 +15,18 @@ MonoBehaviour:
   characterAsset: {fileID: 0}
   Tags: 
   Description: 
-  Story: 
-  storyType: 0
+  Story: "Siraman merupakan salah satu tokoh dari Cerita Rakyat Meraksamana dan Tujuh
+    Bidadari\r yang berasal dari Papua Barat. Siraiman merupakan adik dari Meraksamana,
+    beliau selalu membantu kakanya mencari ikan di sungai."
+  storyType: 3
   Rarity: 0
   TypeOfCard: 0
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 1369151065, guid: 0d2c590a0713d684188e497ca537a7e0, type: 3}
   ManaCost: 2
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
-  MaxHealth: 0
-  Attack: 0
+  MaxHealth: 2
+  Attack: 1
   AttacksForOneTurn: 1
   Taunt: 0
   Charge: 0

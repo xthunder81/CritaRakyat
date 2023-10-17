@@ -16,11 +16,16 @@ MonoBehaviour:
   Tags: 
   Description: 
   Story: 'Arya Penangsang merupakan salah satu tokoh dari Kisah Cerita Rakyat yang
-    berasalah dari Jawa Tengah. '
+    berasalah dari Jawa Tengah. Arya Penangsang merupakan anak dari Raden Kikin yang
+    merupakan Pangeran dari Kerajaan Demak yang mana tewas dalam perebutan tahta
+    Kerajaan Demak oleh Sunan Prawata.
+
+
+'
   storyType: 2
   Rarity: 3
   TypeOfCard: 0
-  CardImage: {fileID: 21300000, guid: 8a6dcd2301fd04d44acd9cc4abd1b271, type: 3}
+  CardImage: {fileID: 21300000, guid: 4cc9feb9bd126d6438f8aad40a6056ff, type: 3}
   ManaCost: 3
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1

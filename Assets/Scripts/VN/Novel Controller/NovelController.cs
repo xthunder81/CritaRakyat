@@ -6,14 +6,22 @@ using UnityEngine;
 public class NovelController : MonoBehaviour
 {
 
+    public static NovelController instance;
+
     List<string> data = new List<string>();
 
     int progress = 0;
 
+    public string vnStory;
+
+    void Awake ()
+    {
+        instance = this;
+    }
 
     void Start()
     {
-        LoadChapterFiles("Prolog");
+        LoadChapterFiles(vnStory);
     }
     void Update()
     {
@@ -57,8 +65,8 @@ public class NovelController : MonoBehaviour
         }
     }
 
-
-    string cachedLastSpeaker = "";
+    [HideInInspector]
+    public string cachedLastSpeaker = "";
     void HandleDialogue(string dialogueDetails, string dialogue)
     {
         string speaker = cachedLastSpeaker;

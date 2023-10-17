@@ -14,13 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
-  storyType: 0
+  Description: memberikan serangan 1 poin kepada semua kertu lawan yang berada di
+    arena
+  Story: 'Dayang Sumbi merupakan salah satu tokoh dari cerita rakyat Legenda Tangkuban
+    Perahu, Legenda Tangkuban Perahu merupakan Cerita Rakyat yang bersalah dari Jawa
+    Barat.
+
+
+    Dalam kisahnya Dayang Sumbi merupakan seorang putri dari Raja yang
+    berada di Jawa Barat, alkisah Dayang Sumbi melakukan sayembara yang mana bila
+    menemukan pintalan yang dimaksud maka Dayang Sumbi akan menikahi pria tersebut.
+    Namun yang menemukan dan memberikan pintalan benang tersbut adalah seekor anjing
+    bernama Tumang, karena sudah terlanjur berjanji akhirnya Dayang Sumbi menikahi
+    si Tumang, Raja yang geram pun mengusir Dayang Sumbi dan Tumang dari kerajaan
+    dan tinggal didalam hutan.
+
+
+    Ketika hidup bersama siTumang didalam hutan,
+    Dayang Sumbi baru tahu bahwa siTumang merupakan anjing yang sakti mandra guna
+    dan sebulan sekali siTumang berubah kewujud manusia. dari situlah mereka hidup
+    bahagia dan memiliki anak bernama Sangkuriang.'
+  storyType: 2
   Rarity: 0
   TypeOfCard: 1
-  CardImage: {fileID: 0}
-  ManaCost: 0
+  CardImage: {fileID: 21300000, guid: cebdc2702c02c554ca8109f08297d1bb, type: 3}
+  ManaCost: 4
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
   MaxHealth: 0
@@ -30,6 +48,6 @@ MonoBehaviour:
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
+  SpellScriptName: DamageAllOpponentCreatures
+  specialSpellAmount: 1
   Targets: 0

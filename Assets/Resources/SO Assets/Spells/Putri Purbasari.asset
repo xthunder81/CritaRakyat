@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
+  Description: menambahkan 1 poin nyawa kepada pemain
   Story: 'Putri Purbasari merupakan merupakan salah satu tokoh cerita rakyat dari
     kisah Lutung Kasarung Jawa Barat, Putri Purbasari merupakan putri bungsu dari
     7 bersaudari.

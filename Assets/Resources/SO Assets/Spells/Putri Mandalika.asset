@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
+  Description: menambahkan nyawa kepada pemain sebanyak 2 poin
   Story: 'Putri Mandalika merupakan salah satu tokoh  utama dari cerita rakyat Legenda
     Putri Mandalika yang berasal dari Nusa Tenggara Barat.
 

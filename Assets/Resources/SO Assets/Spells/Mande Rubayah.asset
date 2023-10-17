@@ -14,12 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
+  Description: memberikan serangan 1 poin kepada kartu lawan di arena
+  Story: 'Mande meruapakan salah satu tokoh dari cerita rakyat Malin Kundang, Malin
+    Kundang merupakan cerita rakyat yang berasal dari Sumatra Barat. Mande Rubayah
+    merupakan ibu dari Malin Kundang.  Mande Rubayah adalah seorang janda miskin
+    yang bekerja keras demi menghidupi keluarganya.
+
+
+    Alkisah anak Mande Rubayah
+    yaitu Malin Kundang ingin merantau demi memperbaiki kehidupan keluarga mereka,
+    mau tidak mau Mande Rubayah mengiklaskan kepergian anak semata wayangnya pergi
+    merantau dan menunggu kepulangannya.'
   storyType: 2
   Rarity: 2
   TypeOfCard: 1
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: 506ae2ee157e6954b8bfa224f4543cb1, type: 3}
   ManaCost: 2
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1

@@ -29,7 +29,7 @@ public class CardNameRibbon : MonoBehaviour {
         if (quantity == 0)
             return;
         
-        QuantityText.text ="X" + quantity.ToString();
+        QuantityText.text = quantity.ToString();
         Quantity = quantity;
     }
 
