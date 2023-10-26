@@ -1,0 +1,7 @@
+John "mari memainkan musik!" playSong("Funky Beets" -v 0.75 -p 1), setMood(chill)
+
+Jane "kamu memiliki selera musik yang aneh." playVoice("e_dl_v2" -v 1.5), setBackground(Room1 -t "Diagonal Lines" -s 3.5)
+
+setAccompListment ("A Legendary Boombox" true), setCLI(Jane 0:Angle 1:Intrigued -s 2.3 -l true)
+
+showScene(false), stopMusic(all -s 1.5)

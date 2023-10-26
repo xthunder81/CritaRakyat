@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
+  Description: menyerang langsung ke karakter lawan sebanyak 2 poin
+  Story: Sepasang Sandal merupakan sebuah cerita rakyat yang berasal dari Nusa Tenggara
+    Barat, alkisah sepasang sandal tersebut murapakan suami istri sang suami bernama
+    Papuq Mame dan dan sang Istri bernama Papuq Qine. mereka merupakan sandal yang
+    selalu digunakan sang raja kemanamun sang raja pergi.
   storyType: 3
   Rarity: 2
   TypeOfCard: 1
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: 25209a5db6e18e94fb2c4de5bb9cd268, type: 3}
   ManaCost: 1
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
@@ -30,6 +33,6 @@ MonoBehaviour:
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
+  SpellScriptName: HeroPower2Face
   specialSpellAmount: 0
   Targets: 0

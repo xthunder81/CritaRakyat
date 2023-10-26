@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
+  Description: mengurangi 2 poin nyawa kartu lawan yang ditargetkan di arena
+  Story: Timun Mas merupakan tokoh utama dari cerita rakyat Timun Mas, Cerita Rakyat
+    Timun Mas berasal dari Jawa Tengah. Timun Mas lahir dari Timun bewarna emas yang
+    merupakan perjanjian Nenek dan Buto Ijo yang mana nenek tersebut menginginkan
+    seorang anak, karena lahir dari timun bewarna emas akhirnya dinamakan Timun Mas.
   storyType: 3
   Rarity: 2
   TypeOfCard: 1
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: 1820f88fd4cdb52438a80e6821f91aff, type: 3}
   ManaCost: 3
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1

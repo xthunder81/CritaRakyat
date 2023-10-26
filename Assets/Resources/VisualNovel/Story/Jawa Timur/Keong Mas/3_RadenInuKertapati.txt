@@ -1,0 +1,105 @@
+Narator "Ditempat lain........"
+
+Narator as ??? "sampai sekarang kita belum menemukan keberadaan Putri Candra Kirana, apalagi informasi tentangnya"
+
+Narator as Prajurit "kami para prajurit juga sudah mencari ke semua wilayah kerajaan namun hasil masih nihil pangeran"
+
+Pangeran Inu Kertapati "tetap kita cari terus, saya tidak bisa menyerah begitu saja setelah sejauh ini"
+
+Prajurit "siap laksanakan pangeran, kami akan memulai pencarian kembali"
+
+Narator "Raden Inu Kertapati dan Prajurit pun memulai pencarian kembali"
+
+Narator "Kembali ke Deka"
+
+Deka "Akhirnya sampai di Kota Kerajaan sial banget aku di serang sama orang tak dikenal untung bisa lolos"
+
+Prajurit "permisi, nak mau tanya apakah pernah melihat wanita seperti di gambar ?"
+
+Deka "(hmmm, bukannya itu Keong Mas kenapa mereka mencarinya ?)"
+
+Deka "Belum pernah liat pak, kalau boleh tau kenapa ya pak ?"
+
+Prajurit "begini putri keluarga kerajaan yaitu Putri Candra Kirana menghilang, kami sedang ditugaskan mencari beliau"
+
+Deka "ohh, sekalian pak saya mau menyakan tentang batu ini mungkin bapak tau ?"
+
+Prajurit "Pangeran Inu Kertapati mungkin mengetahuinya, kebetulan beliau ada di sekitar sini"
+
+Narator "Prajurit tersebut pun mengantarkan Deka ke tempat Pangeran Raden Inu Kertapati berada"
+
+Deka "selamat siang pangeran, perkenalkan nama saya Deka saya seorang pengembara. \nsaya dapat info panjengan tau informasi tentang batu ini"
+
+Raden Inu Kertapati "selamat siang, benar saya mengetahui tentang batu tersebut. namun mohon maaf saya sedang sibuk mencari seseorang"
+
+Deka "sebenarnya saya mengetahui perempuan yang anda cari, namun saya akan memberi tahu bila anda membantu saya mendapatkan batu tersebut"
+
+Rade Inu Kertapati "benarkah ?, baiklah saya akan membantu bila informasi anda memang benar"
+
+Narator "lalu Deka pun menceritakan pertemuannya dengan Putri Candra Kirana dan mengenai kutukan yang di alaminya saat ini"
+
+Raden Inu Kertapati "pantas saja di cari di mana pun tidak ketemu baiklah setelah saya menjemput Putri Candra Kirana saya akan membawa anda ke istana kerajaan batu tersebut ada di sana"
+
+Deka "baik Pangeran, (yess, berjalan lancar akhirnya ketemu juga batu tersebut)"
+
+Narator "Pangeran Raden Inu Kertapati, Deka, dan beberapa prajurit pun berangkat ke tempat nenek"
+
+Narator "Dalam perjalanan mereka bertemu dengan gagak hitam, Deka memiliki firasat buruk ternyata mereka terus tersesat dalam perjalanan"
+
+Narator "setelah lama perkeliling Raden Inu Kertapati beserta rombongannya menemukan seorang kakek-kakek yang tersungkur ditanah"
+
+Raden Inu Kertapati "kakek apa kamu baik - baik saja ?, prajurit ambilkan makanan dan minuman"
+
+Prajurit "Siap Pangeran"
+
+Kakek "terima kasih banyak nak telah membantu saya, saya tidak punya apa - apa untuk diberikan"
+
+Raden Inu Kertapati "tidak perlu kek, sudah sewajarnya untuk saling membantu"
+
+Kakek "tidak bisa begitu nak kita harus membalas budi, saat ini anda sedang mengalami kesulitan bukan ?"
+
+Kakek "Gagak Hitam yang mengikuti kalian lah penyebabnya. (sambi menunjukkan lokasi gagak tersebut)"
+
+Deka "jadi memang benar firasat ku tadi, aku tidak akan membeiarkanmu lolos kali ini"
+
+Battle
+
+Narator "pertempuran pun berakhir dengan bantuan kakek"
+
+Raden Inu Kertapati "terima kasih banyak kek untuk bantuannya tanpa bantuan kakek mungkin kita masih tersesat di dalam hutan"
+
+Kakek "sama - sama nak kalian harus segera melanjutkan perjalanan"
+
+Raden Inu Kertapati "Deka, Prajurit ayo kita segera lanjutkan perjalanan"
+
+Narator "Mereka pun segera melanjutkan perjalanan hingga akhirnya sampai dirumah nenek ke esokan harinya"
+
+Deka "Permisi, apakah ada orang di rumah ?"
+
+Nenek "Deka cepat sekali anda sudah pulang saya kira beberapa bulan lagi baru kembali ke sini"
+
+Deka "saya lagi beruntung nek, nek Keong Mas ada dirumah ? karena ada seseorang yang ingin bertemu dengannya"
+
+Nenek "baiklah saya panggilan dulu"
+
+Keong Mas "Hai Deka, Nenek bilang ada seseorang yang mencariku siapa ?"
+
+Raden Inu Kertapati "Dinda, benarkah itu kamu ?"
+
+Keong Mas "Kanda, bagaimana kamu bisa tahu ada di sini ?"
+
+Raden Inu Kertapati "Dinda, itu tak penting. aku sudah tau kondisi mu dan alasanmu tidak kembali ke kerajaan"
+
+Raden Inu Kertapati "Dinda aku sangat menyayangimu tolong kembalilah denganku"
+
+Keong Mas "aku juga sangat menyayangimu kanda, baik mari kembali ke kerajaan"
+
+Narator "saat itu juga kutukan Keong Mas patah dan dan menghilang"
+
+Raden Inu Kertapati "Deka aku berhutang budi denganmu saat ini mari aku akan segera menyelesaikan masalah yang tersisa"
+
+Raden Inu Kertapati "dan juga menepati janjiku padamu"
+
+Deka "tidak perlu menunda lagi ayo segera berangkat"
+
+Narator "mereka pamit ke Nenek dan langsung menuju Istana Kerajaan"

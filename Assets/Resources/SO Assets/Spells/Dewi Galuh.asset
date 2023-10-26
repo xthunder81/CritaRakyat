@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: Deal 2 Damage To Enemy Creature
+  Description: memberikan serangan 2 poin kepada semua kartu lawan yang ada di arena
   Story: 'Dewi Galuh Merupakan salah satu tokoh dari dongeng cerita rakyat Keong
     Mas, Dewi Galuh adalah kakak dari Keong Mas atau Candra Kirana.
 

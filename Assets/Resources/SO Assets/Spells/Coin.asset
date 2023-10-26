@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
+  Description: menambah batu mana sebanyak 1 poin
   Story: 
   storyType: 0
   Rarity: 0

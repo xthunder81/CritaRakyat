@@ -14,12 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
+  Description: mengorbankan 2 nyawa untuk melakukan pengambilan kartu pada dek pemain
+  Story: 'Rara Mendut  merupakan tokoh utama dari kisah cerita rakyat Rara Mendut,
+    Rara Mendut merupakan kisah cerita rakyat yang berasal dari Jawa Tengah.
+
+
+    Dalam
+    kisahnya Rara Mendut merupakan anak dari nelayan, dia juga juga dikenal sebagai
+    gadis yang teguh pendirian dan cantik jelita, sangking cantiknya sampai banyak
+    yang melamanya namun ditolak dikarenakan Rara Mendut sudah mempunyai kekasih
+    yaitu Prana Citra, suatu hari Adipati Pralogo II melamar melamar Rara Mendut
+    menjadi selirnya namun ditolak sehingga Rara Mendut diculik dan dipingit oleh
+    Adipati Pralogo II.'
   storyType: 2
   Rarity: 2
   TypeOfCard: 1
-  CardImage: {fileID: 0}
+  CardImage: {fileID: -1103821475, guid: 66c8f61fe8bd8bd4692e781b68ea3cb4, type: 3}
   ManaCost: 2
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
@@ -30,6 +40,6 @@ MonoBehaviour:
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
+  SpellScriptName: HeroPowerDrawCardTakeDamage
   specialSpellAmount: 0
-  Targets: 0
+  Targets: 6

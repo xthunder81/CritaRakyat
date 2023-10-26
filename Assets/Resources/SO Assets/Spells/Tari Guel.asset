@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
+  Description: memberikan 1 poin nyawa kepada pemain
+  Story: "Tari Guel merupakan cerita rakyat dan tradisi yang berasal dari daerah
+    Gayo, Provinsi Aceh, Sumatra. tari guel berawal dari mimpi seorang pemuda bernama
+    Sengeda, yakni anak Raja Linge ke XIII. Sengeda dalam mimpinya bertemu saudara
+    kandungnya Bener Meria yang konon telah meninggal dunia karena pengkhianatan.
+    \n\nBener Meria dalam mimpi tersebut memberi petunjuk kepada Sengeda tentang
+    kiat mendapatkan Gajah putih sekaligus cara meenggiring Gajah tersebut untuk
+    dibawa dan dipersembahakan kepada Sultan Aceh Darussalam. Adalah sang putri Sultan
+    sangat berhasrat memiliki Gajah Putih tersebut"
   storyType: 2
   Rarity: 3
   TypeOfCard: 1
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: 27e3919a776998a4b9261adff43d432f, type: 3}
   ManaCost: 4
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
@@ -30,6 +37,6 @@ MonoBehaviour:
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
+  SpellScriptName: GiveHealth
+  specialSpellAmount: 1
   Targets: 0

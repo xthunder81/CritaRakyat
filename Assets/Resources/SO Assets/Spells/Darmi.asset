@@ -14,13 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
-  Story: 
-  storyType: 0
+  Description: memberikan serangan 1 poin kepada kartu lawan di arena
+  Story: 'Darmi merupakan tokoh utama dari cerita rakyat Batu Menangis, Batu Menangis
+    murapakan cerita rakyat yang berasal dari Kalimantan Barat.
+
+
+    Darmi merupakan
+    seorang gadis yang cantik jelita namun sifatnya 180 derajat dari penampilannya,
+    darmi juga merupakan anak yang durhaka kepada ibu nya yang bahkan menyuruh ibu
+    nya menyuci pakaiannya ketika ibu nya sedang sakit.
+
+
+    Pada saat di pasar
+    ketika Para Pemuda berusaha berkenalan dengan Darmi menanyakan siapa wanita yang
+    ada disampingnya, Darmi dengan santainya menyebutkan bahwa ibu yang berada sampingnya
+    adalah pembantunya. Karena sakit hati atas ucapan Darmi, sang ibu berdoa agar
+    dibebaskan dari penderitaannya yang mana akhirnya merubah Darmi menjadi batu
+    yang sambil menangis sambil meminta maaf kepada ibunya.'
+  storyType: 3
   Rarity: 0
   TypeOfCard: 1
-  CardImage: {fileID: 0}
-  ManaCost: 0
+  CardImage: {fileID: 21300000, guid: 3705f27945e31c94195e6315e753a506, type: 3}
+  ManaCost: 1
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
   MaxHealth: 0
@@ -30,6 +45,6 @@ MonoBehaviour:
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
-  Targets: 0
+  SpellScriptName: DealDamageToTarget
+  specialSpellAmount: 1
+  Targets: 2

@@ -1,0 +1,51 @@
+setBackground(InsideCar,false,1) playMusic(car)
+
+narator "perjalanan panjang, sambil menunggu kenapa tidak menikmati pemandangan sekitar ?"
+
+Deka "masih lama kah sampai tujuan ?, sudah 8 jam kita perjalanan kesana."
+
+narator "sabar, namanya aja liburan apalagi sudah lama kita tidak liburan keluarga."
+
+Deka "tau gini mending aku ikut liburan sama temanku di Bandung"
+
+narator "Deka, tolonglah jarang banget loh kita bisa ngumpul bareng seperti ini"
+
+Deka "Iya iya kalau gitu aku tidur dulu"
+
+narator "" exit(Deka) setBackground(null) playMusic(null)
+
+setBackground(2111.w015.n001.604B.p15.604)
+
+Deka "Hoam, eh dimana ini bukannya tadi aku di mobil ya." enter(Deka)
+
+"Pak, Bu, Kak kalian dimana ?, sebenarnya aku ada di mana sih keliahatan seperti di dalam hutan"
+
+narator "Tenangkan dirimu nak, kamu berada di tempat yang aman"
+
+Deka "Anda siapa ? ini dimana ?"
+
+narator "Perkenalkan nama saya Tristan, saya merupakan penjaga dari Perbatasan Dimensi dan sekarang kamu berada di Perbatasan Dimensi"
+
+Deka "hahahaha, kelihatannya aku masih dalam mimpi mana mungkin aku berada di tempat yang tidak masuk akal"
+
+move(Deka,1,0,2,false) flip(Deka)
+
+Tristan "ini bukan mimpi nak, kamu memang berada di Perbatasan Dimensi. kebetulan aku sedang membutuhkan nak"
+
+Deka "bantuan ? mohon maaf tapi saya ingin segera kembali ketempat asal saya keluarga saya sedang menunggu, saya takut mereka kuatir dan sedang mencari saya sekarang"
+
+Tristan "ini juga menguntungkanmu karena hal yang aku butuhkan merupakan satu - satunya tiketmu untuk kembali."
+
+Deka "baiklah aku akan membantumu namun apa jaminan bahwa perkataan anda bisa dipercaya ?"
+
+Tristan "terserah mempercayaiku atau tidak, namun bila ingin kembali maka kamu harus membantuku"
+
+Deka "Baiklah, apa yang perlu aku lakukan ?"
+
+Tristan "kamu hanya perlu pergi kedunia cerita lalu dapatkan batu energi disana" setCinematic(2205_w026_n002_1991b_p1_1991)
+
+Deka "Dunia Cerita ? dunia seperti apa itu ?"
+
+Tristan "Dunia Cerita merupakan dunia di mana kumpulan cerita seperti Legenda, Mitos, dan Dongeng berada"
+
+Deka "haah, walaupun terdengar tidak masuk akal. Setelah apa yang ku alami mau tidak mau harus percaya"

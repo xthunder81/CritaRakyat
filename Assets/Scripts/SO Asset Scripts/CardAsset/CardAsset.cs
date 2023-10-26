@@ -40,7 +40,7 @@ public class CardAsset : ScriptableObject, IComparable<CardAsset>
     public string Tags;
     [TextArea(2, 3)]
     public string Description;  // Description for spell or character
-    [TextArea(2, 3)]
+    [TextArea(2, 10)]
     public string Story;    //Story For spell or character
     public StoryType storyType;
 

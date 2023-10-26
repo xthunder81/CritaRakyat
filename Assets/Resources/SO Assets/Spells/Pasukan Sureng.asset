@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
+  Description: memberikan serangan kepada kartu lawan sebanyak 2 poin
   Story: 'Pasukan Surerng merupakan salah satu tokoh dari cerit rakyat Arya Penangsang
     yang berasalah dari Jawa Tengah, Pasukan Surang merupakan sebuah pasukan elit
     milik Arya Penangsang yang dipimpin oleh Rungkud.
@@ -24,7 +24,7 @@ MonoBehaviour:
   storyType: 2
   Rarity: 1
   TypeOfCard: 1
-  CardImage: {fileID: 0}
+  CardImage: {fileID: 21300000, guid: 790a05018df3a3d479ea9d5337e9a220, type: 3}
   ManaCost: 1
   TokenCard: 0
   OverrideLimitOfThisCardInDeck: -1
