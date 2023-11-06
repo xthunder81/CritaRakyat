@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
+  Description: menyembuhkan 2 poin pada kartu pemain di arena
   Story: 'Ratu Palopo merupakan salah satu tokoh dari cerita rakyat Asal Muasal Kerajaan
     Mori yang berasal dari Sulawesi Tengah. Ratu Palopo merupakan pemimpin dari Kerajaan
     Luwuk di jaman tersebut.
@@ -39,6 +39,6 @@ MonoBehaviour:
   Charge: 0
   CreatureScriptName: 
   specialCreatureAmount: 0
-  SpellScriptName: 
-  specialSpellAmount: 0
-  Targets: 0
+  SpellScriptName: HealCreatures
+  specialSpellAmount: 2
+  Targets: 3

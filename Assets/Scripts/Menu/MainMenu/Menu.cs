@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-// using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -14,19 +14,17 @@ public class Menu : MonoBehaviour
     public Button TokoMenu;
     public Button KeluarMenu;
 
-    [Header("Hame Object Reference")]
+    [Header("Home Object Reference")]
     public GameObject HalamanUtama;
     public GameObject SubPertandinganMenu;
-    public GameObject SubKartuMenu;
 
     [Header("Audio Button Reference")]
     public AudioSource audioButton;
 
     public void TombolHome()
     {
-        
+
         SubPertandinganMenu.SetActive(false);
-        SubKartuMenu.SetActive(false);
         audioButton.Play();
     }
 

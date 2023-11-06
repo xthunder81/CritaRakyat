@@ -135,11 +135,11 @@ public class CollectionBrowser : MonoBehaviour {
         CardsThatYouDoNotHaveToggleScript.SetValue(false);
         ManaFilterSctipt.RemoveAllFilters();
 
-        ShowCards(false, 0, true, false, RarityOptions.Basic, null, "", -1, false);
+        //ShowCards(false, 0, true, false, RarityOptions.Basic, null, "", -1, false);
 
         // select neutral tab by default:
-        DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);   
-        DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing, instant: true);
+        //DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing.Select(instant: true);   
+        //DeckBuildingScreen.Instance.TabsScript.SelectTab(DeckBuildingScreen.Instance.TabsScript.NeutralTabWhenCollectionBrowsing, instant: true);
     }
 
     public void ShowCollectionForDeckBuilding(CharacterAsset buildingForThisCharacter)

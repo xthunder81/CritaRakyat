@@ -63,8 +63,8 @@ public class CraftingScreen : MonoBehaviour {
         manager.ReadCardFromAsset();
 
         // change the text on buttons
-        CraftText.text = "Craft this card for " + TradingCosts[cardToShow.Rarity].CraftCost.ToString() + " dust";
-        DisenchantText.text = "Disenchant to get " + TradingCosts[cardToShow.Rarity].DisenchantOutcome.ToString() + " dust";
+        CraftText.text = "membuat kartu ini membutuhkan " + TradingCosts[cardToShow.Rarity].CraftCost.ToString() + " debu";
+        DisenchantText.text = "menghancurkan kartu untuk dapat " + TradingCosts[cardToShow.Rarity].DisenchantOutcome.ToString() + " debu";
 
         ShopManager.Instance.DustHUD.SetActive(true);
         // make sure that correct amount of cards is shown
@@ -77,7 +77,7 @@ public class CraftingScreen : MonoBehaviour {
     {
         // get amount from collection
         int AmountOfThisCardInYourCollection = CardCollection.Instance.QuantityOfEachCard[currentCard];
-        QuantityText.text = "You have " + AmountOfThisCardInYourCollection.ToString() + " of these";
+        QuantityText.text = "kamu memiliki " + AmountOfThisCardInYourCollection.ToString() + " kartu ini";
         // reload the page to keep the quantity updated in the background
         DeckBuildingScreen.Instance.CollectionBrowserScript.UpdatePage();
     }

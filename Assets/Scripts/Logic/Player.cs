@@ -32,7 +32,7 @@ public class Player : MonoBehaviour, ICharacter
     // this property is a part of interface ICharacter
     public int ID
     {
-        get{ return PlayerID; }
+        get { return PlayerID; }
     }
 
     // opponent player
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour, ICharacter
     private int manaThisTurn;
     public int ManaThisTurn
     {
-        get{ return manaThisTurn;}
+        get { return manaThisTurn; }
         set
         {
             if (value < 0)
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour, ICharacter
     public int ManaLeft
     {
         get
-        { return manaLeft;}
+        { return manaLeft; }
         set
         {
             if (value < 0)
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour, ICharacter
                 manaLeft = PArea.ManaBar.Crystals.Length;
             else
                 manaLeft = value;
-            
+
             //PArea.ManaBar.AvailableCrystals = manaLeft;
             new UpdateManaCrystalsCommand(this, ManaThisTurn, manaLeft).AddToQueue();
             //Debug.Log(ManaLeft);
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour, ICharacter
     private int health;
     public int Health
     {
-        get { return health;}
+        get { return health; }
         set
         {
             if (value > charAsset.MaxHealth)
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour, ICharacter
             else
                 health = value;
             if (value <= 0)
-                Die(); 
+                Die();
         }
     }
 
@@ -125,7 +125,7 @@ public class Player : MonoBehaviour, ICharacter
     public virtual void OnTurnStart()
     {
         // add one mana crystal to the pool;
-        Debug.Log("In ONTURNSTART for "+ gameObject.name);
+        Debug.Log("In ONTURNSTART for " + gameObject.name);
         // usedHeroPowerThisTurn = false;
         ManaThisTurn++;
         ManaLeft = ManaThisTurn;
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour, ICharacter
 
     public void OnTurnEnd()
     {
-        if(EndTurnEvent != null)
+        if (EndTurnEvent != null)
             EndTurnEvent.Invoke();
         ManaThisTurn -= bonusManaThisTurn;
         bonusManaThisTurn = 0;
@@ -153,9 +153,9 @@ public class Player : MonoBehaviour, ICharacter
         ManaLeft += amount;
     }
 
-    public void GetHealSpell (int amount)
+    public void GetHealSpell(int amount)
     {
-        
+
     }
 
     // FOR TESTING ONLY
@@ -180,14 +180,14 @@ public class Player : MonoBehaviour, ICharacter
                 // 2) logic: remove the card from the deck
                 deck.cards.RemoveAt(0);
                 // 2) create a command
-                new DrawACardCommand(hand.CardsInHand[0], this, fast, fromDeck: true).AddToQueue(); 
+                new DrawACardCommand(hand.CardsInHand[0], this, fast, fromDeck: true).AddToQueue();
             }
         }
         else
         {
             // there are no cards in the deck, take fatigue damage.
         }
-       
+
     }
 
     // get card NOT from deck (a token or a coin)
@@ -200,7 +200,7 @@ public class Player : MonoBehaviour, ICharacter
             newCard.owner = this;
             hand.CardsInHand.Insert(0, newCard);
             // 2) send message to the visual Deck
-            new DrawACardCommand(hand.CardsInHand[0], this, fast: true, fromDeck: false).AddToQueue(); 
+            new DrawACardCommand(hand.CardsInHand[0], this, fast: true, fromDeck: false).AddToQueue();
         }
         // no removal from deck because the card was not in the deck
     }
@@ -225,7 +225,7 @@ public class Player : MonoBehaviour, ICharacter
             // target is a creature
             PlayASpellFromHand(CardLogic.CardsCreatedThisGame[SpellCardUniqueID], CreatureLogic.CreaturesCreatedThisGame[TargetUniqueID]);
         }
-          
+
     }
 
     // 2nd overload - takes CardLogic and ICharacter interface - 
@@ -299,16 +299,16 @@ public class Player : MonoBehaviour, ICharacter
         foreach (CardLogic cl in hand.CardsInHand)
         {
             GameObject g = IDHolder.GetGameObjectWithID(cl.UniqueCardID);
-            if (g!=null)
+            if (g != null)
                 g.GetComponent<OneCardManager>().CanBePlayedNow = (cl.CurrentManaCost <= ManaLeft) && !removeAllHighlights;
         }
 
         foreach (CreatureLogic crl in table.CreaturesOnTable)
         {
             GameObject g = IDHolder.GetGameObjectWithID(crl.UniqueCreatureID);
-            if(g!= null)
+            if (g != null)
                 g.GetComponent<OneCreatureManager>().CanAttackNow = (crl.AttacksLeftThisTurn > 0) && !removeAllHighlights;
-        }   
+        }
         // highlight hero power
         // PArea.HeroPower.Highlighted = (!usedHeroPowerThisTurn) && (ManaLeft > 1) && !removeAllHighlights;
         // PArea.HeroPower.Highlighted = (ManaLeft > 1) && !removeAllHighlights;
@@ -346,6 +346,32 @@ public class Player : MonoBehaviour, ICharacter
             PArea.AllowedToControlThisPlayer = true;
         }
     }
-       
-        
+
+    private int money;
+    public int Money
+    {
+        get { return money; }
+        set
+        {
+            money = value;
+        }
+    }
+    public void PlayerWins()
+    {
+        PArea.Portrait.gameObject.AddComponent<IDHolder>().UniqueID = PlayerID;
+        if (GetComponent<TurnMaker>() is PlayerTurnMaker)
+        {
+            Health = charAsset.MaxHealth;
+            if (Health > 0)
+            {
+                if (PlayerPrefs.HasKey("Money"))
+                    Money = PlayerPrefs.GetInt("Money");
+
+                Debug.Log("Player ID : " + PlayerID + " Money : " + Money);
+            }
+
+        }
+    }
+
+
 }

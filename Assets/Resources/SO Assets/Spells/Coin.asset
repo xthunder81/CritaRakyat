@@ -19,7 +19,7 @@ MonoBehaviour:
   storyType: 0
   Rarity: 0
   TypeOfCard: 1
-  CardImage: {fileID: 21300000, guid: 5134138d1a3450e4ba3d7bf5d83dbd8f, type: 3}
+  CardImage: {fileID: 21300000, guid: 71deaef11e792984e8d94b1577221c4b, type: 3}
   ManaCost: 0
   TokenCard: 1
   OverrideLimitOfThisCardInDeck: -1

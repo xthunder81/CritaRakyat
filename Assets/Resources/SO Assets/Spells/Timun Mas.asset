@@ -35,4 +35,4 @@ MonoBehaviour:
   specialCreatureAmount: 0
   SpellScriptName: DealDamageToTarget
   specialSpellAmount: 2
-  Targets: 1
+  Targets: 2

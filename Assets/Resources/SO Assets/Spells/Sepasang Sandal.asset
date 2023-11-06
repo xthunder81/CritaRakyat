@@ -34,5 +34,5 @@ MonoBehaviour:
   CreatureScriptName: 
   specialCreatureAmount: 0
   SpellScriptName: HeroPower2Face
-  specialSpellAmount: 0
+  specialSpellAmount: 2
   Targets: 0

@@ -41,5 +41,5 @@ MonoBehaviour:
   CreatureScriptName: 
   specialCreatureAmount: 0
   SpellScriptName: HeroPowerDrawCardTakeDamage
-  specialSpellAmount: 0
+  specialSpellAmount: 2
   Targets: 6

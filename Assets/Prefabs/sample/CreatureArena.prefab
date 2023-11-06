@@ -1539,7 +1539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defense
+  m_text: Pertahanan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1566,7 +1566,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.55
+  m_fontSize: 22.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2961,11 +2961,13 @@ MonoBehaviour:
   StoryText: {fileID: 0}
   HealthText: {fileID: 7490787141719259317}
   AttackText: {fileID: 3422744974521937947}
+  StoryType: {fileID: 0}
   CardTopRibbonImage: {fileID: 8535944669279062014}
   CardGraphicImage: {fileID: 5111511430277476093}
   CardBodyImage: {fileID: 6767760102513688451}
   CardFaceFrameImage: {fileID: 5201789257301831016}
   CardFaceGlowImage: {fileID: 5725954814445525795}
+  RarityStoneImage: {fileID: 0}
 --- !u!1 &5267286946096312003
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,7 +4585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Attack
+  m_text: Serangan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4610,7 +4612,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.3
+  m_fontSize: 26.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
