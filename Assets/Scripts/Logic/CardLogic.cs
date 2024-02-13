@@ -6,13 +6,13 @@ using System;
 [System.Serializable]
 public class CardLogic: IIdentifiable
 {
-    // reference to a player who holds this card in his hand
+    
     public Player owner;
     // an ID of this card
     public int UniqueCardID; 
-    // a reference to the card asset that stores all the info about this card
+    
     public CardAsset ca;
-    // a script of type spell effect that will be attached to this card when it`s created
+    
     public SpellEffect effect;
 
 
@@ -50,10 +50,9 @@ public class CardLogic: IIdentifiable
         this.ca = ca;
         // get unique int ID
         UniqueCardID = IDFactory.GetUniqueID();
-        //UniqueCardID = IDFactory.GetUniqueID();
+        
         ResetManaCost();
-        // create an instance of SpellEffect with a name from our CardAsset
-        // and attach it to 
+        
         if (ca.SpellScriptName!= null && ca.SpellScriptName!= "")
         {
             effect = System.Activator.CreateInstance(System.Type.GetType(ca.SpellScriptName)) as SpellEffect;

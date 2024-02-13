@@ -38,7 +38,7 @@ public class OneCreatureManager : MonoBehaviour
 
     public void ReadCreatureFromAsset()
     {
-        // Change the card graphic sprite
+        // mengganti sprite card graphic
         CreatureGraphicImage.sprite = cardAsset.CardImage;
 
         AttackText.text = cardAsset.Attack.ToString();

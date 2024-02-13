@@ -27,6 +27,8 @@ public class Player : MonoBehaviour, ICharacter
     // this value used exclusively for our coin spell
     private int bonusManaThisTurn = 0;
 
+    //public int reward;
+
 
     // PROPERTIES 
     // this property is a part of interface ICharacter
@@ -120,6 +122,7 @@ public class Player : MonoBehaviour, ICharacter
         Players = GameObject.FindObjectsOfType<Player>();
         // obtain unique id from IDFactory
         PlayerID = IDFactory.GetUniqueID();
+        LoadMoneyToPlayerPrefs();
     }
 
     public virtual void OnTurnStart()
@@ -185,7 +188,7 @@ public class Player : MonoBehaviour, ICharacter
         }
         else
         {
-            // there are no cards in the deck, take fatigue damage.
+            
         }
 
     }
@@ -281,21 +284,16 @@ public class Player : MonoBehaviour, ICharacter
         PArea.ControlsON = false;
         otherPlayer.PArea.ControlsON = false;
         TurnManager.Instance.StopTheTimer();
+        Money += 50;
+        PlayerWins();
         new GameOverCommand(this).AddToQueue();
     }
 
-    // use hero power - activate is effect like you`ve payed a spell
-    // public void UseHeroPower()
-    // {
-    //     ManaLeft -= 2;
-    //     usedHeroPowerThisTurn = true;
-    //     HeroPowerEffect.ActivateEffect();
-    // }
 
-    // METHOD TO SHOW GLOW HIGHLIGHTS
+    
     public void HighlightPlayableCards(bool removeAllHighlights = false)
     {
-        //Debug.Log("HighlightPlayable remove: "+ removeAllHighlights);
+        
         foreach (CardLogic cl in hand.CardsInHand)
         {
             GameObject g = IDHolder.GetGameObjectWithID(cl.UniqueCardID);
@@ -309,27 +307,15 @@ public class Player : MonoBehaviour, ICharacter
             if (g != null)
                 g.GetComponent<OneCreatureManager>().CanAttackNow = (crl.AttacksLeftThisTurn > 0) && !removeAllHighlights;
         }
-        // highlight hero power
-        // PArea.HeroPower.Highlighted = (!usedHeroPowerThisTurn) && (ManaLeft > 1) && !removeAllHighlights;
-        // PArea.HeroPower.Highlighted = (ManaLeft > 1) && !removeAllHighlights;
     }
 
-    // START GAME METHODS
+    
     public void LoadCharacterInfoFromAsset()
     {
         Health = charAsset.MaxHealth;
-        // change the visuals for portrait, hero power, etc...
+        
         PArea.Portrait.charAsset = charAsset;
         PArea.Portrait.ApplyLookFromAsset();
-
-        // if (charAsset.HeroPowerName != null && charAsset.HeroPowerName != "")
-        // {
-        //     HeroPowerEffect = System.Activator.CreateInstance(System.Type.GetType(charAsset.HeroPowerName)) as SpellEffect;
-        // }
-        // else
-        // {
-        //     Debug.LogWarning("Check hero powr name for character " + charAsset.ClassName);
-        // }
     }
 
     public void TransmitInfoAboutPlayerToVisual()
@@ -337,12 +323,12 @@ public class Player : MonoBehaviour, ICharacter
         PArea.Portrait.gameObject.AddComponent<IDHolder>().UniqueID = PlayerID;
         if (GetComponent<TurnMaker>() is AITurnMaker)
         {
-            // turn off turn making for this character
+            
             PArea.AllowedToControlThisPlayer = false;
         }
         else
         {
-            // allow turn making for this character
+            
             PArea.AllowedToControlThisPlayer = true;
         }
     }
@@ -356,22 +342,18 @@ public class Player : MonoBehaviour, ICharacter
             money = value;
         }
     }
-    public void PlayerWins()
+
+    public void LoadMoneyToPlayerPrefs()
     {
-        PArea.Portrait.gameObject.AddComponent<IDHolder>().UniqueID = PlayerID;
-        if (GetComponent<TurnMaker>() is PlayerTurnMaker)
-        {
-            Health = charAsset.MaxHealth;
-            if (Health > 0)
-            {
-                if (PlayerPrefs.HasKey("Money"))
-                    Money = PlayerPrefs.GetInt("Money");
-
-                Debug.Log("Player ID : " + PlayerID + " Money : " + Money);
-            }
-
-        }
+        if (PlayerPrefs.HasKey("Money"))
+            Money = PlayerPrefs.GetInt("Money");
+        Debug.Log(" Money : " + Money);
     }
 
+    public void PlayerWins()
+    {
+        PlayerPrefs.SetInt("Money", money);
+        Debug.Log("Player ID : " + PlayerID + " Money : " + Money);
+    }
 
 }

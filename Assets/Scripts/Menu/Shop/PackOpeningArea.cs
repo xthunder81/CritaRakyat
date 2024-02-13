@@ -80,14 +80,12 @@ public class PackOpeningArea : MonoBehaviour {
 
     public void ShowPackOpening(Vector3 cardsInitialPosition)
     {      
-        // ShopManager.Instance.PacksCreated--;
-        // Allow To Drag Another Pack Only After DoneButton Is pressed
-        // 1) Determine rarity of all cards
+
         RarityOptions[] rarities = new RarityOptions[SlotsForCards.Length];
         bool AtLeastOneRareGiven = false;
         for (int i = 0; i < rarities.Length; i++)
         {
-            // determine rarity of this card
+            
             float prob = Random.Range(0f,1f);
             if (prob < LegendaryProbability)
             {

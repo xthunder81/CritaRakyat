@@ -19,7 +19,7 @@ public class CreatureAttackVisual : MonoBehaviour
         manager.CanAttackNow = false;
         GameObject target = IDHolder.GetGameObjectWithID(targetUniqueID);
 
-        // bring this creature to front sorting-wise.
+        
         w.BringToFront();
         VisualStates tempState = w.VisualState;
         w.VisualState = VisualStates.Transition;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
   Tags: 
-  Description: 
+  Description: Saat Diletakkan di Arena akan mengurangi 1 poin nyawa lawan
   Story: "Prana Citra atau Prono Citro merupakan salah satu tokoh dari kisah cerita
     rakyat Rara Mendut, Rara Mendut merupakan kisah cerita rakyat yang berasal dari
     Jawa Tengah. \n\nPrana Citra merupakan kekasih dari Rara Mendut yang mana berusaha

@@ -2,8 +2,7 @@
 using System.Collections;
 using DG.Tweening;
 
-// this class should be attached to the deck
-// generates new cards and places them into the hand
+
 public class PlayerDeckVisual : MonoBehaviour {
 
     public AreaPosition owner;

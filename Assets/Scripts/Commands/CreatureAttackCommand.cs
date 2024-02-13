@@ -3,8 +3,7 @@ using System.Collections;
 
 public class CreatureAttackCommand : Command 
 {
-    // position of creature on enemy`s table that will be attacked
-    // if enemyindex == -1 , attack an enemy character 
+    
     private int TargetUniqueID;
     private int AttackerUniqueID;
     private int AttackerHealthAfter;

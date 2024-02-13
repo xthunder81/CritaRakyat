@@ -15,16 +15,16 @@ public enum VisualStates
 
 public class WhereIsTheCardOrCreature : MonoBehaviour {
 
-    // reference to a HoverPreview Component
+
     private HoverPreview hover;
 
-    // reference to a canvas on this object to set sorting order
+
     private Canvas canvas;
 
-    // a value for canvas sorting order when we want to show this object above everything
+
     private int TopSortingOrder = 500;
 
-    // PROPERTIES
+
     private int slot = -1;
     public int Slot
     {
@@ -73,7 +73,7 @@ public class WhereIsTheCardOrCreature : MonoBehaviour {
     void Awake()
     {
         hover = GetComponent<HoverPreview>();
-        // for characters hover is attached to a child game object
+        // untuk tampilan karakter dipasangkan ke komponen
         if (hover == null)
             hover = GetComponentInChildren<HoverPreview>();
         canvas = GetComponentInChildren<Canvas>();
@@ -85,8 +85,7 @@ public class WhereIsTheCardOrCreature : MonoBehaviour {
         canvas.sortingLayerName = "AboveEverything";
     }
 
-    // not setting sorting order inside of VisualStaes property because when the card is drawn, 
-    // we want to set an index first and set the sorting order only when the card arrives to hand. 
+    // untuk mengatur urutan kartu yang ada ditangan 
     public void SetHandSortingOrder()
     {
         if (slot != -1)

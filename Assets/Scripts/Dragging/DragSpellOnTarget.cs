@@ -18,10 +18,7 @@ public class DragSpellOnTarget : DraggingActions {
     {
         get
         { 
-            // TEST LINE: this is just to test playing creatures before the game is complete 
-            // return true;
-
-            // TODO : include full field check
+            
             return base.CanDrag && manager.CanBePlayedNow;
         }
     }
@@ -49,27 +46,27 @@ public class DragSpellOnTarget : DraggingActions {
 
     public override void OnDraggingInUpdate()
     {
-        // This code only draws the arrow
+        
         Vector3 notNormalized = transform.position - transform.parent.position;
         Vector3 direction = notNormalized.normalized;
         float distanceToTarget = (direction*2.3f).magnitude;
         if (notNormalized.magnitude > distanceToTarget)
         {
-            // draw a line between the creature and the target
+            
             lr.SetPositions(new Vector3[]{ transform.parent.position, transform.position - direction*2.3f });
             lr.enabled = true;
 
-            // position the end of the arrow between near the target.
+            
             triangleSR.enabled = true;
             triangleSR.transform.position = transform.position - 1.5f*direction;
 
-            // proper rotarion of arrow end
+            
             float rot_z = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
             triangleSR.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
         }
         else
         {
-            // if the target is not far enough from creature, do not show the arrow
+            
             lr.enabled = false;
             triangleSR.enabled = false;
         }

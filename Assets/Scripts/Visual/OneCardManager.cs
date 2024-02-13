@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 
-// holds the refs to all the Text, Images on the card
+// berisikan referensi text dan gambar pada kartu
 public class OneCardManager : MonoBehaviour {
 
     public CardAsset cardAsset;
@@ -49,7 +49,7 @@ public class OneCardManager : MonoBehaviour {
     public void ReadCardFromAsset()
     {
         // universal actions for any Card
-        // 1) apply tint
+        // 1) membarikan gambar
         // CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
         if (CardFaceFrameImage != null) 
         {
@@ -57,26 +57,26 @@ public class OneCardManager : MonoBehaviour {
             //     CardFaceFrameImage.color = Color.;
             CardFaceFrameImage.color = StoryTypeColors.Instance.colorDictionary[cardAsset.storyType];
         }
-        // 2) add card name
+        // 2) menambahkan nama
         NameText.text = cardAsset.name;
-        // 3) add mana cost
+        // 3) manambahkan jumlah mana
         ManaCostText.text = cardAsset.ManaCost.ToString();
-        // 4) add description
-        DescriptionText.text = cardAsset.Description;
-        // 5) Change the card graphic sprite
+        // 4) menambahkan deskripsi
+        if (DescriptionText != null)
+        {
+            DescriptionText.text = cardAsset.Description;
+        }    
+        // 5) merubah tampilan CardGraphicImage
         CardGraphicImage.sprite = cardAsset.CardImage;
 
         if (cardAsset.MaxHealth != 0)
         {
-            // this is a creature
             AttackText.text = cardAsset.Attack.ToString();
             HealthText.text = cardAsset.MaxHealth.ToString();
         }
 
         if (PreviewManager != null)
         {
-            // this is a card and not a preview
-            // Preview GameObject will have OneCardManager as well, but PreviewManager should be null there
             PreviewManager.cardAsset = cardAsset;
             PreviewManager.ReadCardFromAsset();
         }

@@ -43,7 +43,7 @@ public class CraftingScreen : MonoBehaviour {
     {
         currentCard = cardToShow;
 
-        // select type of card to show on this screen - creature or spell
+        
         GameObject cardObject;
         if (currentCard.TypeOfCard == TypesOfCards.Creature)
         {
@@ -57,28 +57,28 @@ public class CraftingScreen : MonoBehaviour {
             CreatureCard.SetActive(false);
             SpellCard.SetActive(true);
         }
-        // change the look of the card to the card that we selected 
+        
         OneCardManager manager = cardObject.GetComponent<OneCardManager>();
         manager.cardAsset = cardToShow;
         manager.ReadCardFromAsset();
 
-        // change the text on buttons
+        
         CraftText.text = "membuat kartu ini membutuhkan " + TradingCosts[cardToShow.Rarity].CraftCost.ToString() + " debu";
         DisenchantText.text = "menghancurkan kartu untuk dapat " + TradingCosts[cardToShow.Rarity].DisenchantOutcome.ToString() + " debu";
 
         ShopManager.Instance.DustHUD.SetActive(true);
-        // make sure that correct amount of cards is shown
+        
         UpdateQuantityOfCurrentCard();
-        // show the content of this screen
+        
         Content.SetActive(true);
     }
 
     public void UpdateQuantityOfCurrentCard()
     {
-        // get amount from collection
+        
         int AmountOfThisCardInYourCollection = CardCollection.Instance.QuantityOfEachCard[currentCard];
         QuantityText.text = "kamu memiliki " + AmountOfThisCardInYourCollection.ToString() + " kartu ini";
-        // reload the page to keep the quantity updated in the background
+        
         DeckBuildingScreen.Instance.CollectionBrowserScript.UpdatePage();
     }
 
@@ -102,7 +102,7 @@ public class CraftingScreen : MonoBehaviour {
         }
         else
         {
-            // TODO: show that basic cards can not be crafted or disable crafting buttons for them in advanvce
+            
         }
     }
 
@@ -116,7 +116,7 @@ public class CraftingScreen : MonoBehaviour {
                 ShopManager.Instance.Dust += TradingCosts[currentCard.Rarity].DisenchantOutcome;
                 UpdateQuantityOfCurrentCard();
 
-                // check if any of the decks in the collection are now lacking cards because we have disenchanted this card. 
+                
                 foreach(DeckInfo info in DecksStorage.Instance.AllDecks)
                 {
                     while (info.NumberOfThisCardInDeck(currentCard) > CardCollection.Instance.QuantityOfEachCard[currentCard])
@@ -125,18 +125,18 @@ public class CraftingScreen : MonoBehaviour {
                     }
                 }
 
-                // if we are currently editing a deck and it contains a card that we just disenchanted
+                
                 while (DeckBuildingScreen.Instance.BuilderScript.InDeckBuildingMode &&
                        DeckBuildingScreen.Instance.BuilderScript.NumberOfThisCardInDeck(currentCard) > CardCollection.Instance.QuantityOfEachCard[currentCard])
                 {
-                    // remove the card from the deck.
+                   
                     DeckBuildingScreen.Instance.BuilderScript.RemoveCard(currentCard);
                 }
             }
         }
         else
         {
-            // TODO: show that basic cards can not be disenchanted or disable crafting buttons for them in advanvce
+            
         }
     }
 }

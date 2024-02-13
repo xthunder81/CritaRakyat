@@ -2,11 +2,7 @@
 using System.Collections;
 using DG.Tweening;
 
-/// <summary>
-/// This class enables Drag and Drop Behaviour for the game object it is attached to. 
-/// It uses other script - DraggingActions to determine whether we can drag this game object now or not and 
-/// whether the drop was successful or not.
-/// </summary>
+
 
 public class Draggable : MonoBehaviour {
 

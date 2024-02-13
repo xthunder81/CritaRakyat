@@ -673,11 +673,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 97280ecec26f9e843a791d711ee7206f, type: 2}
   - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
   - {fileID: 11400000, guid: 279049bfce30bb841b7a87aa604e7cf6, type: 2}
-  - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
-  - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
-  - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
-  - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
-  - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
+  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: da6b9ce8fcad5154b97f82b78123be7e, type: 2}
+  - {fileID: 11400000, guid: 7fc898713a8c5684fb56ba65fefd978a, type: 2}
+  - {fileID: 11400000, guid: 0ccdb234da0c1f04aac2692709633d0e, type: 2}
+  - {fileID: 11400000, guid: fbf5362b4b16f5745816517b933e7f6e, type: 2}
 --- !u!1 &237911030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2973,15 +2973,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - {fileID: 11400000, guid: 97280ecec26f9e843a791d711ee7206f, type: 2}
-  - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
   - {fileID: 11400000, guid: 0b02c39f84dda7146b288adfddba8d5a, type: 2}
   - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: 97280ecec26f9e843a791d711ee7206f, type: 2}
+  - {fileID: 11400000, guid: cee1da34a04ed0a49918404dd6b84362, type: 2}
+  - {fileID: 11400000, guid: 279049bfce30bb841b7a87aa604e7cf6, type: 2}
   - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
-  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
-  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
-  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
-  - {fileID: 11400000, guid: 3951f01217d06234bac96da5d3d9ecdf, type: 2}
+  - {fileID: 11400000, guid: da6b9ce8fcad5154b97f82b78123be7e, type: 2}
+  - {fileID: 11400000, guid: 7fc898713a8c5684fb56ba65fefd978a, type: 2}
+  - {fileID: 11400000, guid: 0ccdb234da0c1f04aac2692709633d0e, type: 2}
+  - {fileID: 11400000, guid: fbf5362b4b16f5745816517b933e7f6e, type: 2}
 --- !u!1 &1681946213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3449,6 +3450,10 @@ PrefabInstance:
       propertyPath: PlayPreviewSpot
       value: 
       objectReference: {fileID: 1862065313}
+    - target: {fileID: 2219516977369406747, guid: 501abc1cd85c94f45b2fb1b88589766e, type: 3}
+      propertyPath: TakeCardsOpenly
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2219516977369406747, guid: 501abc1cd85c94f45b2fb1b88589766e, type: 3}
       propertyPath: OtherCardDrawSourceTransform
       value: 
@@ -4536,6 +4541,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1310127586}
     m_Modifications:
+    - target: {fileID: 1390664585908123395, guid: 5f8d6d29daca6094399fcb772638ea70, type: 3}
+      propertyPath: owner
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1626923379197124263, guid: 5f8d6d29daca6094399fcb772638ea70, type: 3}
       propertyPath: m_Name
       value: Deck

@@ -57,7 +57,7 @@ public class HeroInfoPanel : MonoBehaviour {
             portrait.ApplyLookFromAsset();
             portrait.gameObject.SetActive(true);
             selectedDeck = deck;
-            // instantly load this information to our BattleStartInfo.
+            
             BattleStartInfo.SelectedDeck = selectedDeck.DeckInformation;
 
             if (PlayButton!=null)
@@ -65,8 +65,7 @@ public class HeroInfoPanel : MonoBehaviour {
         }
     }
 
-    // this method is called when we are on the character selection screen
-    // it opens the deck bulder for the character that we have selected
+    
     public void GoToDeckbuilding()
     {
         if (selectedPortrait == null)

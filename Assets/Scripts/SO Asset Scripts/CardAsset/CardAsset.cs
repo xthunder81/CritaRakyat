@@ -52,12 +52,12 @@ public class CardAsset : ScriptableObject, IComparable<CardAsset>
     public Sprite CardImage;
     [Range(1, 20)]
     public int ManaCost;
-    public bool TokenCard = false; // token cards can not be seen in collection
+    public bool TokenCard = false; 
     public int OverrideLimitOfThisCardInDeck = -1;
 
     [Header("Creature Info")]
     [Range(1, 20)]
-    public int MaxHealth;   // =0 => spell card
+    public int MaxHealth;   
     [Range(1, 10)]
     public int Attack;
     [Range(1, 10)]
@@ -84,30 +84,30 @@ public class CardAsset : ScriptableObject, IComparable<CardAsset>
         }
         else
         {
-            // if mana costs are equal sort in alphabetical order
+            
             return name.CompareTo(other.name);
         }
     }
 
-    // Define the is greater than operator.
+    
     public static bool operator >  (CardAsset operand1, CardAsset operand2)
     {
         return operand1.CompareTo(operand2) == 1;
     }
 
-    // Define the is less than operator.
+    
     public static bool operator <  (CardAsset operand1, CardAsset operand2)
     {
         return operand1.CompareTo(operand2) == -1;
     }
 
-    // Define the is greater than or equal to operator.
+    
     public static bool operator >=  (CardAsset operand1, CardAsset operand2)
     {
         return operand1.CompareTo(operand2) >= 0;
     }
 
-    // Define the is less than or equal to operator.
+    
     public static bool operator <=  (CardAsset operand1, CardAsset operand2)
     {
         return operand1.CompareTo(operand2) <= 0;

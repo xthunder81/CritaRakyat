@@ -13,11 +13,11 @@ public class GuideSystem : MonoBehaviour
     {
         menu = GetComponent<Menu>();
 
-        // Disable the previous selected object, if any.
+
         if (_selectedObjectIndex >= 0)
             guides[_selectedObjectIndex].SetActive(false);
 
-        // Update our selected index and activate the corresponding object.
+
         _selectedObjectIndex = selectedIndex;
         guides[selectedIndex].SetActive(true);
 
@@ -56,19 +56,6 @@ public class GuideSystem : MonoBehaviour
         // SelectObject(0);
     }
 
-    // void Update()
-    // {
-    //     if (_selectedObjectIndex == 2)
-    //     {
-    //         menu.TombolKartu();
-    //     }
-        
-    //     else if (_selectedObjectIndex > 3)
-    //     {
-    //         menu.TombolHome();
-    //     }
-    // }
-
     private int tempGuide;
     public int TempGuide
     {
@@ -92,9 +79,6 @@ public class GuideSystem : MonoBehaviour
 
     public void Guide_Line()
     {
-        // Compute the next index in the list.
-        // The modulo operator % "wraps" our index around to zero when we pass the last object.
-        // int nextObjectIndex = (_selectedObjectIndex + 1) % guides.Length;
         int nextObjectIndex = _selectedObjectIndex;
         if (nextObjectIndex < guides.Length)
         {

@@ -25,9 +25,9 @@ public class TurnOverCardFromPack : MonoBehaviour {
             return;
 
         turnedOver = true;        
-        // turn the card over
+        
         transform.DORotate(Vector3.zero, 0.5f);
-        // add this card to collection as unlocked
+        
         ShopManager.Instance.OpeningArea.NumberOfCardsOpenedFromPack++;
     }
 

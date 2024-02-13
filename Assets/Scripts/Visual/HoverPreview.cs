@@ -5,7 +5,7 @@ using DG.Tweening;
 public class HoverPreview : MonoBehaviour
 {
     // PUBLIC FIELDS
-    public GameObject TurnThisOffWhenPreviewing;  // if this is null, will not turn off anything 
+    public GameObject TurnThisOffWhenPreviewing;  //  
     public Vector3 TargetPosition;
     public float TargetScale;
     public GameObject previewGameObject;
@@ -69,14 +69,14 @@ public class HoverPreview : MonoBehaviour
     // OTHER METHODS
     void PreviewThisObject()
     {
-        // 1) clone this card 
-        // first disable the previous preview if there is one already
+        // 1) duplikat objek kartu
+        // menonaktifkan semua preview kartu
         StopAllPreviews();
-        // 2) save this HoverPreview as curent
+        // 2) menyimpan data kartu
         currentlyViewing = this;
-        // 3) enable Preview game object
+        // 3) mengaktifkan card preview
         previewGameObject.SetActive(true);
-        // 4) disable if we have what to disable
+        // 4) menonkatifkan preview kartu
         if (TurnThisOffWhenPreviewing != null)
             TurnThisOffWhenPreviewing.SetActive(false);
         // 5) tween to target position

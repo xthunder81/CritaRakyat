@@ -88,18 +88,6 @@ public class AITurnMaker : TurnMaker
         return false;
     }
 
-    // bool UseHeroPower()
-    // {
-    //     if (p.ManaLeft >= 2 && !p.usedHeroPowerThisTurn)
-    //     {
-    //         // use HP
-    //         p.UseHeroPower();
-    //         InsertDelay(1.5f);
-    //         //Debug.Log("AI used hero power");
-    //         return true;
-    //     }
-    //     return false;
-    // }
 
     bool AttackWithACreature()
     {

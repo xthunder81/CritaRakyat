@@ -13,10 +13,7 @@ public class DragSpellNoTarget : DraggingActions
     {
         get
         {
-            // TEST LINE: this is just to test playing creatures before the game is complete 
-            // return true;
-
-            // TODO : include full field check
+            
             return base.CanDrag && manager.CanBePlayedNow;
         }
     }
@@ -43,21 +40,21 @@ public class DragSpellNoTarget : DraggingActions
 
     public override void OnEndDrag()
     {
-        // 1) Check if we are holding a card over the table
+        
         if (DragSuccessful())
         {
-            // play this card
+            
             playerOwner.PlayASpellFromHand(GetComponent<IDHolder>().UniqueID, -1);
         }
         else
         {
-            // Set old sorting order 
+             
             whereIsCard.Slot = savedHandSlot;
             if (tag.Contains("Low"))
                 whereIsCard.VisualState = VisualStates.LowHand;
             else
                 whereIsCard.VisualState = VisualStates.TopHand;
-            // Move this card back to its slot position
+            
             HandVisual PlayerHand = playerOwner.PArea.handVisual;
             Vector3 oldCardPos = PlayerHand.slots.Children[savedHandSlot].transform.localPosition;
             transform.DOLocalMove(oldCardPos, 1f);
@@ -68,18 +65,18 @@ public class DragSpellNoTarget : DraggingActions
     {
         //bool TableNotFull = (TurnManager.Instance.whoseTurn.table.CreaturesOnTable.Count < 8);
 
-        return TableVisual.CursorOverSomeTable; //&& TableNotFull;
+        return TableVisual.CursorOverSomeTable; 
     }
 
     public override void OnCancelDrag()
     {
-        // Set old sorting order 
+        
         whereIsCard.Slot = savedHandSlot;
         if (tag.Contains("Low"))
             whereIsCard.VisualState = VisualStates.LowHand;
         else
             whereIsCard.VisualState = VisualStates.TopHand;
-        // Move this card back to its slot position
+        
         HandVisual PlayerHand = playerOwner.PArea.handVisual;
         Vector3 oldCardPos = PlayerHand.slots.Children[savedHandSlot].transform.localPosition;
         transform.DOLocalMove(oldCardPos, 1f);

@@ -1,17 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/// <summary>
-/// This script should be attached to the card game object to display card`s rotation correctly.
-/// </summary>
+
 
 [ExecuteInEditMode]
 public class BetterCardRotation2 : MonoBehaviour {
  
-    // parent game object for all the card face graphics
+    
     public RectTransform CardFront;
  
-    // parent game object for all the card back graphics
+    
     public RectTransform CardBack;
  
     // Update is called once per frame

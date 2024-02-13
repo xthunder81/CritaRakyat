@@ -18,14 +18,14 @@ public class PlayACreatureCommand : Command
 
     public override void StartCommandExecution()
     {
-        // remove and destroy the card in hand 
+        
         HandVisual PlayerHand = p.PArea.handVisual;
         GameObject card = IDHolder.GetGameObjectWithID(cl.UniqueCardID);
         PlayerHand.RemoveCard(card);
         GameObject.Destroy(card);
-        // enable Hover Previews Back
+        
         HoverPreview.PreviewsAllowed = true;
-        // move this card to the spot 
+         
         p.PArea.tableVisual.AddCreatureAtIndex(cl.ca, creatureID, tablePos);
     }
 }
